@@ -244,6 +244,9 @@ input[type="checkbox"]:focus {
     border-color: rgba(255,255,255,0.8);
 }
 
+.unit-icon {
+    height: 50px;
+}
 
 /**
  * DISCORD LOG CSS
