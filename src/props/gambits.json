@@ -1,0 +1,151 @@
+[{
+  "name": "Disturbance",
+  "mt": 4,
+  "hit": 60,
+  "magic": false,
+  "note": ""
+},{
+  "name": "Lure",
+  "mt": 4,
+  "hit": 50,
+  "magic": false,
+  "note": "Pulls adjacent foe to opposite side"
+},{
+  "name": "Assembly",
+  "mt": 5,
+  "hit": 50,
+  "magic": false,
+  "note": "User and main target are both pulled back by 1 space"
+},{
+  "name": "Group Flames",
+  "mt": 2,
+  "hit": 60,
+  "magic": true,
+  "note": "Converts grass, forest, thicket, wasteland, and house terrain into flames terrain for 1 turn"
+},{
+  "name": "Group Ice",
+  "mt": 3,
+  "hit": 50,
+  "magic": true,
+  "note": ""
+},{
+  "name": "Group Lance Attack",
+  "mt": 6,
+  "hit": 50,
+  "magic": false,
+  "note": "Attacks all foes in area"
+},{
+  "name": "Group Lightning",
+  "mt": 4,
+  "hit": 40,
+  "magic": true,
+  "note": ""
+},{
+  "name": "Mad Melee",
+  "mt": 4,
+  "hit": 60,
+  "magic": false,
+  "note": "Attacks all foes in area"
+},{
+  "name": "Poisoned Arrows",
+  "mt": 4,
+  "hit": 60,
+  "magic": false,
+  "note": "Mt x3 vs flying, inflicts poison on all targets"
+},{
+  "name": "Random Shot",
+  "mt": 8,
+  "hit": 40,
+  "magic": false,
+  "note": "Attacks all foes in area"
+},{
+  "name": "Assault Troop",
+  "mt": 10,
+  "hit": 50,
+  "magic": false,
+  "note": "Attacks all foes in area"
+},{
+  "name": "Flash-Fire Arrows",
+  "mt": 7,
+  "hit": 50,
+  "magic": false,
+  "note": "Mt x3 vs. flying. Converts grass, forest, thicket, wasteland, and house terrain into flames terrain for 1 turn."
+},{
+  "name": "Fusilade",
+  "mt": 5,
+  "hit": 50,
+  "magic": true,
+  "note": "Mt x3 vs flying"
+},{
+  "name": "Onslaught",
+  "mt": 8,
+  "hit": 50,
+  "magic": false,
+  "note": "Pushes adjacent foe back one space"
+},{
+  "name": "Resonant Flames",
+  "mt": 6,
+  "hit": 60,
+  "magic": true,
+  "note": "Converts grass, forest, thicket, wasteland, and house terrain into flames terrain for 1 turn."
+},{
+  "name": "Resonant Ice",
+  "mt": 7,
+  "hit": 50,
+  "magic": true,
+  "note": ""
+},{
+  "name": "Resonant Lightning",
+  "mt": 8,
+  "hit": 40,
+  "magic": true,
+  "note": ""
+},{
+  "name": "Reversal",
+  "mt": 8,
+  "hit": 50,
+  "magic": false,
+  "note": "User switches places with primary target"
+},{
+  "name": "Line of Lances",
+  "mt": 8,
+  "hit": 50,
+  "magic": false,
+  "note": "Mt x3 vs Cavalry"
+},{
+  "name": "Poison Tactic",
+  "mt": 5,
+  "hit": 60,
+  "magic": false,
+  "note": "Inflicts poison on all foes in area"
+},{
+  "name": "Absorption",
+  "mt": 4,
+  "hit": 30,
+  "magic": false,
+  "note": "Restores (damage dealt/2 HP to user from each target in the area"
+},{
+  "name": "Ashes and Dust",
+  "mt": 12,
+  "hit": 30,
+  "magic": false,
+  "note": "Mt x 3 vs flying"
+},{
+  "name": "Blaze",
+  "mt": 10,
+  "hit": 50,
+  "magic": true,
+  "note": "converts grass, forest, thicket, wasteland, and house terrain into flames terrain for 1 turn"
+},{
+  "name": "Linked Horses",
+  "mt": 12,
+  "hit": 50,
+  "magic": false,
+  "note": ""
+},{
+  "name": "Wave Attack",
+  "mt": 13,
+  "hit": 60,
+  "magic": false,
+  "note": "Mt x3 vs armor"
+}]

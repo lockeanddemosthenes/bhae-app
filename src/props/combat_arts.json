@@ -1,0 +1,613 @@
+[{
+  "name": "Wrath Strike",
+  "type": "sword",
+  "magic": false,
+  "mt": 5,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": ""
+},{
+  "name": "Grounder",
+  "type": "sword",
+  "magic": false,
+  "mt": 5,
+  "hit": 20,
+  "crit": 5,
+  "avo": 0,
+  "note": "WpMt x2 vs flying"
+},{
+  "name": "Bane of Monsters",
+  "type": "swod",
+  "magic": false,
+  "mt": 6,
+  "hit": 0,
+  "crit": 10,
+  "avo": 0,
+  "note": "WpMt x2 vs monsters"
+},{
+  "name": "Haze Slice",
+  "type": "sword",
+  "magic": false,
+  "mt": 2,
+  "hit": 0,
+  "crit": 0,
+  "avo": 30,
+  "note": ""
+},{
+  "name": "Hexblade",
+  "type": "sword",
+  "magic": true,
+  "mt": 7,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "Mag based"
+},{
+  "name": "Sunder",
+  "type": "sword",
+  "magic": false,
+  "mt": 4,
+  "hit": 0,
+  "crit": 15,
+  "avo": 0,
+  "note": ""
+},{
+  "name": "Soulblade",
+  "type": "sword",
+  "magic": true,
+  "mt": 2,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "mag based, mt+(res/3)"
+},{
+  "name": "Windsweep",
+  "type": "sword",
+  "magic": false,
+  "mt": 3,
+  "hit": 20,
+  "crit": 10,
+  "avo": 0,
+  "note": "Prevents counterattack"
+},{
+  "name": "Finesse Blade",
+  "type": "sword",
+  "magic": false,
+  "mt": 2,
+  "hit": 0,
+  "crit": 0,
+  "avo": 10,
+  "note": "Mt+(dex/3)"
+},{
+  "name": "Tempest Lance",
+  "type": "lance",
+  "magic": false,
+  "mt": 8,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": ""
+},{
+  "name": "Knightkneeler",
+  "type": "lance",
+  "magic": false,
+  "mt": 5,
+  "hit": 15,
+  "crit": 0,
+  "avo": 0,
+  "note": "WpMt x2 Cavalry"
+},{
+  "name": "Shatter Slash",
+  "type": "lance",
+  "magic": false,
+  "mt": 4,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "After, Def-5 on foe (1 turn)"
+},{
+  "name": "Vengeance",
+  "type": "lance",
+  "magic": false,
+  "mt": 2,
+  "hit": 0,
+  "crit": 10,
+  "avo": 0,
+  "note": "Mt+(missing HP/3"
+},{
+  "name": "Monster Piecer",
+  "type": "lance",
+  "magic": false,
+  "mt": 7,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "WpMt x2 vs monsters"
+},{
+  "name": "Hit and Run",
+  "type": "lance",
+  "magic": false,
+  "mt": 4,
+  "hit": 10,
+  "crit": 0,
+  "avo": 20,
+  "note": "After, move back 1 space"
+},{
+  "name": "Frozen lance",
+  "type": "",
+  "magic": true,
+  "mt": 3,
+  "hit": 5,
+  "crit": 0,
+  "avo": 0,
+  "note": "Mag based, Mt+(dex/3)"
+},{
+  "name": "Swift Strikes",
+  "type": "lance",
+  "magic": false,
+  "mt": 2,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "2 consecutive hits"
+},{
+  "name": "Glowing Ember",
+  "type": "lance",
+  "magic": false,
+  "mt": 2,
+  "hit": 0,
+  "crit": 0,
+  "avo": 10,
+  "note": "Mt+(Def/3)"
+},{
+  "name": "Lance Jab",
+  "type": "lance",
+  "magic": false,
+  "mt": 3,
+  "hit": 0,
+  "crit": 10,
+  "avo": 0,
+  "note": "Mt+(Spd/3)"
+},{
+  "name": "Smash",
+  "type": "axe",
+  "magic": false,
+  "mt": 3,
+  "hit": 20,
+  "crit": 20,
+  "avo": 0,
+  "note": ""
+},{
+  "name": "Helm Splitter",
+  "type": "axe",
+  "magic": false,
+  "mt": 7,
+  "hit": 0,
+  "crit": 5,
+  "avo": 0,
+  "note": "WpMt x2 vs Armor"
+},{
+  "name": "Monster Breaker",
+  "type": "axe",
+  "magic": false,
+  "mt": 9,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "WpMt x2 vs monsters"
+},{
+  "name": "Focused Strike",
+  "type": "axe",
+  "magic": false,
+  "mt": 0,
+  "hit": 30,
+  "crit": 0,
+  "avo": 0,
+  "note": "none"
+},{
+  "name": "Wild Abandon",
+  "type": "axe",
+  "magic": false,
+  "mt": 10,
+  "hit": -30,
+  "crit": 30,
+  "avo": 0,
+  "note": "none"
+},{
+  "name": "Lightning Axe",
+  "type": "axe",
+  "magic": true,
+  "mt": 4,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "Mag based, Mt(res/3)"
+},{
+  "name": "Spike",
+  "type": "axe",
+  "magic": false,
+  "mt": 5,
+  "hit": 15,
+  "crit": 10,
+  "avo": 0,
+  "note": "none"
+},{
+  "name": "Diamond Axe",
+  "type": "axe",
+  "magic": false,
+  "mt": 14,
+  "hit": -20,
+  "crit": 0,
+  "avo": 0,
+  "note": ""
+},{
+  "name": "Armored Strike",
+  "type": "axe",
+  "magic": false,
+  "mt": 4,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "Mt+(Def/3)"
+},{
+  "name": "Curved Shot",
+  "type": "bow",
+  "magic": false,
+  "mt": 1,
+  "hit": 30,
+  "crit": 0,
+  "avo": 0,
+  "note": "none"
+},{
+  "name": "Heavy Draw",
+  "type": "bow",
+  "magic": false,
+  "mt": 8,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "none"
+},{
+  "name": "Deadeye",
+  "type": "bow",
+  "magic": false,
+  "mt": 6,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "none"
+},{
+  "name": "Waning Shot",
+  "type": "bow",
+  "magic": false,
+  "mt": 4,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "After, Str-5 on foe (1 turn)"
+},{
+  "name": "Monster Blast",
+  "type": "bow",
+  "magic": false,
+  "mt": 5,
+  "hit": 0,
+  "crit": 10,
+  "avo": 0,
+  "note": "WpMt x2 vs monsters"
+},{
+  "name": "Break Shot",
+  "type": "bow",
+  "magic": false,
+  "mt": 4,
+  "hit": 5,
+  "crit": 0,
+  "avo": 0,
+  "note": "After, Def-5 on foe (1 turn)"
+},{
+  "name": "Schism Shot",
+  "type": "bow",
+  "magic": false,
+  "mt": 4,
+  "hit": 15,
+  "crit": 0,
+  "avo": 0,
+  "note": "After, Res-5 on foe (1 turn)"
+},{
+  "name": "Point-Blank Volley",
+  "type": "bow",
+  "magic": false,
+  "mt": 3,
+  "hit": 10,
+  "crit": 0,
+  "avo": 10,
+  "note": "2 consecutive hits, 1 range"
+},{
+  "name": "Encloser",
+  "type": "bow",
+  "magic": false,
+  "mt": 4,
+  "hit": 15,
+  "crit": 0,
+  "avo": 0,
+  "note": "After, foe cannot move (1 turn)"
+},{
+  "name": "Ward Arrow",
+  "type": "bow",
+  "magic": false,
+  "mt": 4,
+  "hit": 15,
+  "crit": 0,
+  "avo": 0,
+  "note": "After, foe cannot use magic (1 turn)"
+},{
+  "name": "Fading Blow",
+  "type": "brawl",
+  "magic": false,
+  "mt": 6,
+  "hit": 10,
+  "crit": 0,
+  "avo": 30,
+  "note": "After, move 1 space back"
+},{
+  "name": "Rushing Blow",
+  "type": "brawl",
+  "magic": false,
+  "mt": 7,
+  "hit": 20,
+  "crit": 0,
+  "avo": 10,
+  "note": "After, move 1 space past foe"
+},{
+  "name": "Draining Blow",
+  "type": "brawl",
+  "magic": false,
+  "mt": 5,
+  "hit": 20,
+  "crit": 0,
+  "avo": 0,
+  "note": "Restores 50% dmg to HP"
+},{
+  "name": "Bombard",
+  "type": "brawl",
+  "magic": false,
+  "mt": 3,
+  "hit": 0,
+  "crit": 10,
+  "avo": 0,
+  "note": "2 consecutive hits"
+},{
+  "name": "One-Two Punch",
+  "type": "brawl",
+  "magic": false,
+  "mt": 8,
+  "hit": 20,
+  "crit": 0,
+  "avo": 0,
+  "note": "Guaranteed Follow-up"
+},{
+  "name": "Nimble Combo",
+  "type": "brawl",
+  "magic": false,
+  "mt": 4,
+  "hit": 20,
+  "crit": 0,
+  "avo": 0,
+  "note": "2 consecutive hits"
+},{
+  "name": "Monster Crusher",
+  "type": "brawl",
+  "magic": false,
+  "mt": 13,
+  "hit": 10,
+  "crit": 10,
+  "avo": 0,
+  "note": "WpMt x2 vs Monsters"
+},{
+  "name": "Healing Focus",
+  "type": "brawl",
+  "magic": false,
+  "mt": 0,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "Targets self, Restores 50% HP"
+},{
+  "name": "Mystic Blow",
+  "type": "brawl",
+  "magic": true,
+  "mt": 10,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "Mag based"
+},{
+  "name": "Mighty Blow",
+  "type": "brawl",
+  "magic": false,
+  "mt": 10,
+  "hit": -4,
+  "crit": 20,
+  "avo": 0,
+  "note": "none"
+},{
+  "name": "Assassinate",
+  "type": "sword",
+  "magic": false,
+  "mt": 0,
+  "hit": 15,
+  "crit": 15,
+  "avo": 0,
+  "note": "Class based"
+},{
+  "name": "Astra",
+  "type": "sword",
+  "magic": false,
+  "mt": 0,
+  "hit": -10,
+  "crit": 0,
+  "avo": 0,
+  "note": "5 consecutive hits at 30% Mt, Class based"
+},{
+  "name": "War Master’s Strike",
+  "type": "axe",
+  "magic": false,
+  "mt": 3,
+  "hit": 30,
+  "crit": 0,
+  "avo": 0,
+  "note": "Mt x2 vs all foes, Class based"
+},{
+  "name": "Hunters Volley",
+  "type": "bow",
+  "magic": false,
+  "mt": 1,
+  "hit": 15,
+  "crit": 10,
+  "avo": 0,
+  "note": "2 consecutive hits, Class based"
+},{
+  "name": "Fierce Iron Fist",
+  "type": "brawl",
+  "magic": false,
+  "mt": 1,
+  "hit": 0,
+  "crit": 0,
+  "avo": 10,
+  "note": "3 consecutive hits"
+},{
+  "name": "Pneuma Gale",
+  "type": "brawl",
+  "magic": false,
+  "mt": 7,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "Mag based, Class based"
+},{
+  "name": "Subue",
+  "type": "sword",
+  "magic": false,
+  "mt": 0,
+  "hit": 20,
+  "crit": 0,
+  "avo": 0,
+  "note": "Cannot kill foe"
+},{
+  "name": "Triangle Attack",
+  "type": "lance",
+  "magic": false,
+  "mt": 8,
+  "hit": 30,
+  "crit": 40,
+  "avo": 0,
+  "note": "Requires 3 flying units adjacent to foe"
+},{
+  "name": "Sword Dance",
+  "type": "sword",
+  "magic": false,
+  "mt": 1,
+  "hit": 0,
+  "crit": 0,
+  "avo": 20,
+  "note": "Mt+(Cha/3)"
+},{
+  "name": "Atrocity",
+  "type": "lance",
+  "magic": false,
+  "mt": 15,
+  "hit": 20,
+  "crit": 0,
+  "avo": 0,
+  "note": "WpMt x2 vs all"
+},{
+  "name": "Beast Fang",
+  "type": "sword",
+  "magic": false,
+  "mt": 10,
+  "hit": 0,
+  "crit": 30,
+  "avo": 0,
+  "note": "WpMt x2 vs cavalry, dragon"
+},{
+  "name": "Dust",
+  "type": "axe",
+  "magic": false,
+  "mt": 20,
+  "hit": 0,
+  "crit": 0,
+  "avo": 0,
+  "note": "WpMt x2 vs dragon. Afterward, inflicts Def -5 on foe for one turn"
+},{
+  "name": "Fallen Star",
+  "type": "bow",
+  "magic": false,
+  "mt": 10,
+  "hit": 30,
+  "crit": 10,
+  "avo": 0,
+  "note": "WpMt x2 vs dragon. Avoids all attacks during next round of combat"
+},{
+  "name": "Apocalyptic Flame",
+  "type": "axe",
+  "magic": false,
+  "mt": 15,
+  "hit": 20,
+  "crit": 0,
+  "avo": 0,
+  "note": "WpMt x2 vs dragon. Afterward, inflicts Str -5 on foe for one turn"
+},{
+  "name": "Ruined Sky",
+  "type": "lance",
+  "magic": false,
+  "mt": 13,
+  "hit": 10,
+  "crit": 10,
+  "avo": 10,
+  "note": "WpMt x2 vs dragon, flying"
+},{
+  "name": "Burning Quake",
+  "type": "lance",
+  "magic": false,
+  "mt": 8,
+  "hit": 0,
+  "crit": 20,
+  "avo": 10,
+  "note": "WpMt x2 vs dragon. Mt + (Spd/3)"
+},{
+  "name": "Ruptured Heaven",
+  "type": "sword",
+  "magic": false,
+  "mt": 7,
+  "hit": 10,
+  "crit": 10,
+  "avo": 0,
+  "note": "WpMt x2 vs dragon. Mt + (Mag/3)"
+},{
+  "name": "Foudroyant Strike",
+  "type": "sword",
+  "magic": false,
+  "mt": 6,
+  "hit": 30,
+  "crit": 30,
+  "avo": 0,
+  "note": "WpMt x2 vs dragon, armor"
+},{
+  "name": "Raging Storm",
+  "type": "axe",
+  "magic": false,
+  "mt": 14,
+  "hit": 10,
+  "crit": 0,
+  "avo": 0,
+  "note": "WpMt x2 vs dragon. On a hit, user can move again"
+},{
+  "name": "Eviscerate",
+  "type": "brawl",
+  "magic": false,
+  "mt": 10,
+  "hit": 10,
+  "crit": 10,
+  "avo": 0,
+  "note": "Targets lower of foe's def/res - calculate by hand"
+}]

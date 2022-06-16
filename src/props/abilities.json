@@ -1,0 +1,11 @@
+[{
+  "id": "ABI0001",
+  "name": "Armored Blow",
+  "icon": "armored_blow",
+  "desc": "Def+6 when initiating combat."
+},{
+  "id": "ABI0002",
+  "name": "Avoid +10",
+  "icon": "avoid_10",
+  "desc": "Avo +10."
+}]
