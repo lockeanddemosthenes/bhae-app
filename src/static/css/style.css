@@ -149,7 +149,7 @@ blockquote p {
 img, video {
     height: auto;
     max-width: 100%;
-    margin: 0 2.5rem 0.6em 2.5rem;
+    margin: 0.1rem 0.25rem;
 }
 
 /* Buttons, forms and input */
@@ -159,7 +159,7 @@ dropdown, dropdown:focus,
 select, select:focus {
     border: 1px solid #64C89A;
     background-color: #8ff2b6;
-    font-family: 'EB-Garamond';
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Noto Sans", sans-serif;;
     margin: 0.25rem 2.5rem 1rem 2.5rem;
 }
 
@@ -180,9 +180,9 @@ textarea {
     box-sizing: border-box;
     font-size: 25px;
     padding: 10px 20px;
-    margin: 0 2.5rem 0 2.5rem;
-    font-family: 'EB-Garamond';
-    font-weight: 800;
+    margin: 0 2.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Noto Sans", sans-serif;;
+    font-weight: 600;
 }
 
 .button[disabled], button[disabled],
@@ -245,11 +245,41 @@ input[type="checkbox"]:focus {
 }
 
 .unit-icon {
-    height: 50px;
+    height: 80px;
+    padding-left: 1.2em;
 }
 
 .ability-icon {
     height: 30px;
+}
+
+.cwe-icons {
+    line-height: 1.2em;
+}
+
+.crest-icon {
+    height: 25px;
+    margin: 0;
+}
+
+.wep-icon {
+    height: 20px;
+    margin: 0;
+}
+
+.eqp-icon {
+    height: 20px;
+    margin: 0;
+}
+
+.Results {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.UnitIconContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /**
