@@ -248,6 +248,10 @@ input[type="checkbox"]:focus {
     height: 50px;
 }
 
+.ability-icon {
+    height: 30px;
+}
+
 /**
  * DISCORD LOG CSS
  */

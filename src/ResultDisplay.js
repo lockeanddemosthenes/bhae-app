@@ -1,24 +1,23 @@
 import ReactTooltip from "react-tooltip";
-import logo from './logo.svg';
-import yuri from './static/img/sprite/yuri_commoner.png';
 import './static/css/App.css';
+
+const abilitiesData = require('./props/abilities.json'),
+multilineTrue = true;
+
+let participant1 = "yuri_commoner";
+
+let abilityName = abilitiesData[1].name;
+let abilityIcon = abilitiesData[1].icon;
+let abilityDesc = "<b>" + abilityName + "</b><br />" + abilitiesData[1].desc;
 
 function ResultDisplay() {
   return (
     <div className="Results">
-        <img src={logo} className="App-logo" alt="logo" /> <br/>
-        <img src={yuri} data-for="main" className="unit-icon" alt="Yuri" data-tip="Yuri Leclerc (AW)<br/>Lv 13 Thief" data-iscapture="true"/>
-        <p>
-          Edit <code>src/ResultDisplay.js</code> and save to reload.
-        </p>
-        <p>
-          woah...
-        </p>
-
-        <ReactTooltip
-            id="main"
-            multiline="true"
-        />
+        <div className="Participant1">
+            <img src={process.env.PUBLIC_URL + '/img/sprite/' + participant1 + '.png'} data-class="unitInfo" className="unit-icon" alt="Yuri" data-tip="Yuri Leclerc (AW)<br/>Lv 13 Thief"/>
+            <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} data-class="abilityInfo" className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
+        </div>
+        <ReactTooltip className="toolTip" html={true} />
     </div>
   );
 }
