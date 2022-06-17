@@ -1,0 +1,1530 @@
+[{
+  "name": "Training Sword",
+  "type": "swordd",
+  "magic": false,
+  "mt": 3,
+  "hit": 100,
+  "crit": 0,
+  "wt": 4
+},{
+  "name": "Training Sword+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 3,
+  "hit": 100,
+  "crit": 0,
+  "wt": 2,
+  "note": ""
+},{
+  "name": "Steel Sword",
+  "type": "swordd",
+  "magic": false,
+  "mt": 8,
+  "hit": 85,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Steel Sword+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 10,
+  "hit": 85,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Killing Edge",
+  "type": "swordd",
+  "magic": false,
+  "mt": 5,
+  "hit": 80,
+  "crit": 25,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Killing Edge+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 7,
+  "hit": 80,
+  "crit": 35,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Levin Sword",
+  "type": "swordd",
+  "magic": true,
+  "mt": 9,
+  "hit": 70,
+  "crit": 0,
+  "wt": 9,
+  "note": "Mag-based dmg"
+},{
+  "name": "Levin Sword+",
+  "type": "swordd",
+  "magic": true,
+  "mt": 9,
+  "hit": 70,
+  "crit": 0,
+  "wt": 9,
+  "note": "Mag-based dmg"
+},{
+  "name": "Venin Edge",
+  "type": "swordd",
+  "magic": false,
+  "mt": 5,
+  "hit": 90,
+  "crit": 0,
+  "wt": 6,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Venin Edge+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 6,
+  "hit": 100,
+  "crit": 0,
+  "wt": 6,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Silver Sword",
+  "type": "swordd",
+  "magic": false,
+  "mt": 12,
+  "hit": 90,
+  "crit": 0,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Silver Sword+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 14,
+  "hit": 90,
+  "crit": 0,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Wo Dao",
+  "type": "swordd",
+  "magic": false,
+  "mt": 8,
+  "hit": 90,
+  "crit": 30,
+  "wt": 5,
+  "note": ""
+},{
+  "name": "Wo Dao+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 9,
+  "hit": 90,
+  "crit": 40,
+  "wt": 5,
+  "note": ""
+},{
+  "name": "Brave Sword",
+  "type": "swordd",
+  "magic": false,
+  "mt": 9,
+  "hit": 75,
+  "crit": 0,
+  "wt": 12,
+  "note": "Attacks twice"
+},{
+  "name": "Brave Sword+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 10,
+  "hit": 85,
+  "crit": 0,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Cursed Ashiya Sword",
+  "type": "swordd",
+  "magic": false,
+  "mt": 13,
+  "hit": 70,
+  "crit": 40,
+  "wt": 8,
+  "note": "Inflicts 5 dmg on wielder after combat"
+},{
+  "name": "Cursed Ashiya Sword+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 14,
+  "hit": 70,
+  "crit": 50,
+  "wt": 8,
+  "note": "Inflicts 5 dmg on wielder after combat"
+},{
+  "name": "Sword of Zoltan",
+  "type": "swordd",
+  "magic": false,
+  "mt": 13,
+  "hit": 90,
+  "crit": 0,
+  "wt": 9,
+  "note": ""
+},{
+  "name": "Sword of Zoltan+",
+  "type": "swordd",
+  "magic": false,
+  "mt": 16,
+  "hit": 90,
+  "crit": 5,
+  "wt": 9,
+  "note": ""
+},{
+  "name": "Mercurius",
+  "type": "swordd",
+  "magic": false,
+  "mt": 15,
+  "hit": 100,
+  "crit": 10,
+  "wt": 7,
+  "note": ""
+},{
+  "name": "Sword of Seiros",
+  "type": "swords",
+  "magic": false,
+  "mt": 11,
+  "hit": 80,
+  "crit": 10,
+  "wt": 6,
+  "note": "Heals 50% of dmg dealt. Restores 10% HP each turn"
+},{
+  "name": "Sword of Begalta",
+  "type": "swords",
+  "magic": false,
+  "mt": 12,
+  "hit": 100,
+  "crit": 0,
+  "wt": 5,
+  "note": "Restores 10% HP each turn (20% with Crest of Riegan)"
+},{
+  "name": "Sword of Moralta",
+  "type": "swords",
+  "magic": false,
+  "mt": 13,
+  "hit": 75,
+  "crit": 25,
+  "wt": 9,
+  "note": "Restores 10% HP each turn (20% with Crest of Fraldarius)"
+},{
+  "name": "Thunderbrand",
+  "type": "swordg",
+  "magic": false,
+  "mt": 13,
+  "hit": 70,
+  "crit": 10,
+  "wt": 7,
+  "note": "Crest of Charon. Strike twice if initiating combat"
+},{
+  "name": "Sword of the Creator",
+  "type": "swordg",
+  "magic": false,
+  "mt": 7,
+  "hit": 90,
+  "crit": 0,
+  "wt": 9,
+  "note": "Byleth only"
+},{
+  "name": "Sublime Creator Sword",
+  "type": "swordg",
+  "magic": false,
+  "mt": 15,
+  "hit": 90,
+  "crit": 10,
+  "wt": 7,
+  "note": "Byleth only"
+},{
+  "name": "Blutgang",
+  "type": "swordg",
+  "magic": true,
+  "mt": 13,
+  "hit": 80,
+  "crit": 0,
+  "wt": 7,
+  "note": "Crest of the Beast. Mag-based dmg"
+},{
+  "name": "Training Lance",
+  "type": "lanced",
+  "magic": false,
+  "mt": 4,
+  "hit": 90,
+  "crit": 0,
+  "wt": 5,
+  "note": ""
+},{
+  "name": "Training Lance+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 4,
+  "hit": 90,
+  "crit": 0,
+  "wt": 5,
+  "note": ""
+},{
+  "name": "Iron Lance",
+  "type": "lanced",
+  "magic": false,
+  "mt": 6,
+  "hit": 80,
+  "crit": 0,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Iron Lance+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 7,
+  "hit": 90,
+  "crit": 0,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Javelin",
+  "type": "lanced",
+  "magic": false,
+  "mt": 2,
+  "hit": 80,
+  "crit": 0,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Javelin+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 3,
+  "hit": 80,
+  "crit": 0,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Horseslayer",
+  "type": "lanced",
+  "magic": false,
+  "mt": 8,
+  "hit": 70,
+  "crit": 0,
+  "wt": 13,
+  "note": "WpMtx3 (+16) vs. Cavalry"
+},{
+  "name": "Horseslayer+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 8,
+  "hit": 90,
+  "crit": 5,
+  "wt": 13,
+  "note": "WpMtx3 (+16) vs. Cavalry"
+},{
+  "name": "Steel Lance",
+  "type": "lanced",
+  "magic": false,
+  "mt": 9,
+  "hit": 75,
+  "crit": 0,
+  "wt": 11,
+  "note": ""
+},{
+  "name": "Steel Lance+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 11,
+  "hit": 75,
+  "crit": 0,
+  "wt": 11,
+  "note": ""
+},{
+  "name": "Killer Lance",
+  "type": "lanced",
+  "magic": false,
+  "mt": 6,
+  "hit": 70,
+  "crit": 25,
+  "wt": 13,
+  "note": ""
+},{
+  "name": "Killer Lance+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 7,
+  "hit": 70,
+  "crit": 35,
+  "wt": 13,
+  "note": ""
+},{
+  "name": "Short Spear",
+  "type": "lanced",
+  "magic": false,
+  "mt": 5,
+  "hit": 75,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Short Spear+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 7,
+  "hit": 75,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Venin Lance",
+  "type": "lanced",
+  "magic": false,
+  "mt": 6,
+  "hit": 80,
+  "crit": 0,
+  "wt": 7,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Venin Lance+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 7,
+  "hit": 90,
+  "crit": 0,
+  "wt": 7,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Silver Lance",
+  "type": "lanced",
+  "magic": false,
+  "mt": 13,
+  "hit": 80,
+  "crit": 0,
+  "wt": 9,
+  "note": ""
+},{
+  "name": "Silver Lance+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 14,
+  "hit": 80,
+  "crit": 0,
+  "wt": 9,
+  "note": ""
+},{
+  "name": "Brave Lance",
+  "type": "lanced",
+  "magic": false,
+  "mt": 10,
+  "hit": 70,
+  "crit": 0,
+  "wt": 13,
+  "note": "Attacks twice"
+},{
+  "name": "Brace Lance+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 11,
+  "hit": 80,
+  "crit": 0,
+  "wt": 13,
+  "note": "Attacks twice"
+},{
+  "name": "Spear",
+  "type": "lanced",
+  "magic": false,
+  "mt": 8,
+  "hit": 70,
+  "crit": 0,
+  "wt": 13,
+  "note": ""
+},{
+  "name": "Spear+",
+  "type": "lanced",
+  "magic": false,
+  "mt": 9,
+  "hit": 70,
+  "crit": 0,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Crescent Sickle",
+  "type": "lanced",
+  "magic": false,
+  "mt": 10,
+  "hit": 80,
+  "crit": 0,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Crescent Sickle",
+  "type": "lanced",
+  "magic": false,
+  "mt": 11,
+  "hit": 80,
+  "crit": 10,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Blessed Lance",
+  "type": "lances",
+  "magic": false,
+  "mt": 7,
+  "hit": 80,
+  "crit": 0,
+  "wt": 14,
+  "note": "WpMtx3 (+14) vs. monsters. Restores 10% hp each turn"
+},{
+  "name": "Arrow of Indra",
+  "type": "lances",
+  "magic": true,
+  "mt": 12,
+  "hit": 75,
+  "crit": 0,
+  "wt": 14,
+  "note": ""
+},{
+  "name": "Lance of Zoltan",
+  "type": "lances",
+  "magic": false,
+  "mt": 15,
+  "hit": 80,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Gradivus",
+  "type": "lances",
+  "magic": false,
+  "mt": 17,
+  "hit": 90,
+  "crit": 10,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Spear of Assal",
+  "type": "lanceg",
+  "magic": false,
+  "mt": 14,
+  "hit": 85,
+  "crit": 10,
+  "wt": 9,
+  "note": "WpMt x3 (+28) vs. cavalry. Restores 10% HP each turn (20% with Crest of Cichol)"
+},{
+  "name": "Lance of Ruin",
+  "type": "lanceg",
+  "magic": false,
+  "mt": 22,
+  "hit": 65,
+  "crit": 20,
+  "wt": 9,
+  "note": "Crest of Gautier"
+},{
+  "name": "Areadbhar",
+  "type": "lanceg",
+  "magic": false,
+  "mt": 19,
+  "hit": 75,
+  "crit": 10,
+  "wt": 9,
+  "note": "Crest of Blaiddyd"
+},{
+  "name": "Lúin",
+  "type": "lanceg",
+  "magic": false,
+  "mt": 17,
+  "hit": 90,
+  "crit": 10,
+  "wt": 9,
+  "note": "Crest of Daphnel"
+},{
+  "name": "Scythe of Sariel",
+  "type": "lanceb",
+  "magic": false,
+  "mt": 10,
+  "hit": 100,
+  "crit": 30,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Training Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 6,
+  "hit": 80,
+  "crit": 0,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Training Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 6,
+  "hit": 80,
+  "crit": 0,
+  "wt": 4,
+  "note": ""
+},{
+  "name": "Mace",
+  "type": "axed",
+  "magic": false,
+  "mt": 6,
+  "hit": 70,
+  "crit": 0,
+  "wt": 6,
+  "note": "WpMtx3 (+12) vs. armor"
+},{
+  "name": "Mace+",
+  "type": "axed",
+  "magic": false,
+  "mt": 6,
+  "hit": 90,
+  "crit": 5,
+  "wt": 6,
+  "note": "WpMtx3 (+12) vs. armor"
+},{
+  "name": "Iron Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 8,
+  "hit": 70,
+  "crit": 0,
+  "wt": 7,
+  "note": ""
+},{
+  "name": "Iron Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 9,
+  "hit": 75,
+  "crit": 0,
+  "wt": 7,
+  "note": ""
+},{
+  "name": "Hammer",
+  "type": "axed",
+  "magic": false,
+  "mt": 10,
+  "hit": 60,
+  "crit": 0,
+  "wt": 15,
+  "note": "WpMtx3 vs. armor"
+},{
+  "name": "Hammer+",
+  "type": "axed",
+  "magic": false,
+  "mt": 10,
+  "hit": 80,
+  "crit": 5,
+  "wt": 15,
+  "note": "WpMtx3 vs. armor"
+},{
+  "name": "Hand Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 4,
+  "hit": 70,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Hand Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 5,
+  "hit": 70,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Steel Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 11,
+  "hit": 65,
+  "crit": 0,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Steel Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 13,
+  "hit": 65,
+  "crit": 0,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Killer Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 8,
+  "hit": 60,
+  "crit": 25,
+  "wt": 14,
+  "note": ""
+},{
+  "name": "Killer Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 8,
+  "hit": 60,
+  "crit": 35,
+  "wt": 14,
+  "note": ""
+},{
+  "name": "Short Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 8,
+  "hit": 65,
+  "crit": 0,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Short Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 9,
+  "hit": 65,
+  "crit": 0,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Venin Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 8,
+  "hit": 70,
+  "crit": 0,
+  "wt": 18,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Venin Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 9,
+  "hit": 80,
+  "crit": 0,
+  "wt": 18,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Silver Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 16,
+  "hit": 70,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Silver Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 17,
+  "hit": 70,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Brave Axe",
+  "type": "axed",
+  "magic": false,
+  "mt": 12,
+  "hit": 60,
+  "crit": 0,
+  "wt": 14,
+  "note": "Attacks twice"
+},{
+  "name": "Brave Axe+",
+  "type": "axed",
+  "magic": false,
+  "mt": 13,
+  "hit": 70,
+  "crit": 0,
+  "wt": 14,
+  "note": "Attacks twice"
+},{
+  "name": "Bolt Axe",
+  "type": "axed",
+  "magic": true,
+  "mt": 14,
+  "hit": 60,
+  "crit": 0,
+  "wt": 15,
+  "note": "Mag-based dmg"
+},{
+  "name": "Bolt Axe+",
+  "type": "axed",
+  "magic": true,
+  "mt": 15,
+  "hit": 60,
+  "crit": 10,
+  "wt": 15,
+  "note": "Mag-based dmg"
+},{
+  "name": "Tomahawk",
+  "type": "axed",
+  "magic": false,
+  "mt": 12,
+  "hit": 60,
+  "crit": 0,
+  "wt": 14,
+  "note": ""
+},{
+  "name": "Tomahawk+",
+  "type": "axed",
+  "magic": false,
+  "mt": 13,
+  "hit": 65,
+  "crit": 0,
+  "wt": 14,
+  "note": ""
+},{
+  "name": "Axe of Zoltan",
+  "type": "axed",
+  "magic": false,
+  "mt": 17,
+  "hit": 70,
+  "crit": 0,
+  "wt": 14,
+  "note": "WpMtx3 (+34) vs. armor"
+},{
+  "name": "Axe of Zoltan+",
+  "type": "axed",
+  "magic": false,
+  "mt": 20,
+  "hit": 70,
+  "crit": 5,
+  "wt": 14,
+  "note": "WpMtx3 (+40) vs. armor"
+},{
+  "name": "Hauteclere",
+  "type": "axed",
+  "magic": false,
+  "mt": 19,
+  "hit": 80,
+  "crit": 10,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Axe of Ukonvasara",
+  "type": "axes",
+  "magic": false,
+  "mt": 19,
+  "hit": 65,
+  "crit": 20,
+  "wt": 15,
+  "note": "Restores 10% HP each turn (20% with Crest of Gloucester). WpMtx3 (+38) vs. armor"
+},{
+  "name": "Freikugel",
+  "type": "axeg",
+  "magic": false,
+  "mt": 23,
+  "hit": 65,
+  "crit": 10,
+  "wt": 11,
+  "note": "Crest of Goneril"
+},{
+  "name": "Crusher",
+  "type": "axeg",
+  "magic": true,
+  "mt": 18,
+  "hit": 60,
+  "crit": 0,
+  "wt": 11,
+  "note": "Crest of Dominic. Mag-based dmg"
+},{
+  "name": "Aymr",
+  "type": "axeg",
+  "magic": false,
+  "mt": 24,
+  "hit": 60,
+  "crit": 20,
+  "wt": 11,
+  "note": "Crest of Seiros"
+},{
+  "name": "Training Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 3,
+  "hit": 90,
+  "crit": 0,
+  "wt": 5,
+  "note": ""
+},{
+  "name": "Training Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 3,
+  "hit": 90,
+  "crit": 0,
+  "wt": 3,
+  "note": ""
+},{
+  "name": "Iron Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 6,
+  "hit": 85,
+  "crit": 0,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Iron Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 7,
+  "hit": 95,
+  "crit": 0,
+  "wt": 5,
+  "note": ""
+},{
+  "name": "Mini Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 4,
+  "hit": 90,
+  "crit": 0,
+  "wt": 3,
+  "note": ""
+},{
+  "name": "Mini Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 6,
+  "hit": 90,
+  "crit": 10,
+  "wt": 3,
+  "note": ""
+},{
+  "name": "Steel Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 9,
+  "hit": 80,
+  "crit": 0,
+  "wt": 11,
+  "note": ""
+},{
+  "name": "Steel Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 11,
+  "hit": 80,
+  "crit": 0,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Longbow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 9,
+  "hit": 70,
+  "crit": 0,
+  "wt": 13,
+  "note": ""
+},{
+  "name": "Longbow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 11,
+  "hit": 70,
+  "crit": 0,
+  "wt": 13,
+  "note": ""
+},{
+  "name": "Killer Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 6,
+  "hit": 75,
+  "crit": 25,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Killer Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 7,
+  "hit": 75,
+  "crit": 35,
+  "wt": 12,
+  "note": ""
+},{
+  "name": "Venin Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 6,
+  "hit": 85,
+  "crit": 0,
+  "wt": 6,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Venin Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 7,
+  "hit": 95,
+  "crit": 0,
+  "wt": 6,
+  "note": "Poisons foe on hit"
+},{
+  "name": "Silver Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 12,
+  "hit": 75,
+  "crit": 0,
+  "wt": 9,
+  "note": ""
+},{
+  "name": "Silver Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 13,
+  "hit": 75,
+  "crit": 0,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Brave Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 10,
+  "hit": 70,
+  "crit": 0,
+  "wt": 13,
+  "note": "Attacks twice"
+},{
+  "name": "Brave Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 11,
+  "hit": 80,
+  "crit": 0,
+  "wt": 12,
+  "note": "Attacks twice"
+},{
+  "name": "Magic Bow",
+  "type": "bowd",
+  "magic": true,
+  "mt": 8,
+  "hit": 75,
+  "crit": 0,
+  "wt": 9,
+  "note": "Mag-based dmg"
+},{
+  "name": "Magic Bow+",
+  "type": "bowd",
+  "magic": true,
+  "mt": 8,
+  "hit": 85,
+  "crit": 0,
+  "wt": 8,
+  "note": "Mag-based dmg"
+},{
+  "name": "Blessed Bow",
+  "type": "bowd",
+  "magic": false,
+  "mt": 6,
+  "hit": 70,
+  "crit": 0,
+  "wt": 14,
+  "note": "WpMtx3 (+12) vs. monsters. Restores 10% HP each turn"
+},{
+  "name": "Blessed Bow+",
+  "type": "bowd",
+  "magic": false,
+  "mt": 7,
+  "hit": 70,
+  "crit": 0,
+  "wt": 14,
+  "note": "WpMtx3 (+14) vs. monsters. Restories 15% HP each turn"
+},{
+  "name": "Bow of Zoltan",
+  "type": "bowd",
+  "magic": false,
+  "mt": 13,
+  "hit": 75,
+  "crit": 0,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Bow of Zoltan",
+  "type": "bowd",
+  "magic": false,
+  "mt": 16,
+  "hit": 75,
+  "crit": 5,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Parthia",
+  "type": "bowd",
+  "magic": false,
+  "mt": 15,
+  "hit": 85,
+  "crit": 10,
+  "wt": 7,
+  "note": ""
+},{
+  "name": "Tathlum Bow",
+  "type": "bows",
+  "magic": false,
+  "mt": 13,
+  "hit": 80,
+  "crit": 10,
+  "wt": 11,
+  "note": "Restories 10% HP each turn (20% with Crest of Lamine)"
+},{
+  "name": "The Inexhaustible",
+  "type": "bows",
+  "magic": false,
+  "mt": 11,
+  "hit": 80,
+  "crit": 0,
+  "wt": 11,
+  "note": "2 consecutive hits when initiating combat. Restores 10% HP each turn (20% with Crest of Indech)"
+},{
+  "name": "Failnaught",
+  "type": "bowg",
+  "magic": false,
+  "mt": 18,
+  "hit": 75,
+  "crit": 20,
+  "wt": 9,
+  "note": "Crest of Riegan"
+},{
+  "name": "Training Gauntlets",
+  "type": "brawld",
+  "magic": false,
+  "mt": 0,
+  "hit": 90,
+  "crit": 5,
+  "wt": 1,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Training Gauntlets+",
+  "type": "brawld",
+  "magic": false,
+  "mt": 0,
+  "hit": 100,
+  "crit": 5,
+  "wt": 1,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Unarmed Combat",
+  "type": "brawld",
+  "magic": false,
+  "mt": 0,
+  "hit": 70,
+  "crit": 0,
+  "wt": 0,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Iron Gauntlets",
+  "type": "brawld",
+  "magic": false,
+  "mt": 1,
+  "hit": 85,
+  "crit": 5,
+  "wt": 3,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Iron Gauntlets+",
+  "type": "brawld",
+  "magic": false,
+  "mt": 1,
+  "hit": 95,
+  "crit": 5,
+  "wt": 3,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Steel Gauntlets",
+  "type": "brawld",
+  "magic": false,
+  "mt": 3,
+  "hit": 80,
+  "crit": 5,
+  "wt": 5,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Steel Gauntlets+",
+  "type": "brawld",
+  "magic": false,
+  "mt": 3,
+  "hit": 85,
+  "crit": 5,
+  "wt": 1,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Killer Gauntlets",
+  "type": "brawld",
+  "magic": false,
+  "mt": 1,
+  "hit": 75,
+  "crit": 20,
+  "wt": 5,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Killer Gauntlets+",
+  "type": "brawld",
+  "magic": false,
+  "mt": 2,
+  "hit": 80,
+  "crit": 30,
+  "wt": 5,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Silver Gauntlets",
+  "type": "brawld",
+  "magic": false,
+  "mt": 4,
+  "hit": 85,
+  "crit": 5,
+  "wt": 7,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Silver Gauntlets+",
+  "type": "brawld",
+  "magic": false,
+  "mt": 4,
+  "hit": 90,
+  "crit": 5,
+  "wt": 6,
+  "note": "Hit 2x when initiating"
+},{
+  "name": "Aura Knuckles",
+  "type": "brawld",
+  "magic": true,
+  "mt": 2,
+  "hit": 70,
+  "crit": 0,
+  "wt": 4,
+  "note": "Hit 2x when initiating. Mag-based dmg"
+},{
+  "name": "Aura Knuckles+",
+  "type": "brawld",
+  "magic": true,
+  "mt": 2,
+  "hit": 70,
+  "crit": 5,
+  "wt": 3,
+  "note": "Hit 2x when initiating. Mag-based dmg"
+},{
+  "name": "Dragon Claws",
+  "type": "brawld",
+  "magic": false,
+  "mt": 4,
+  "hit": 75,
+  "crit": 5,
+  "wt": 7,
+  "note": "Hit 2x when initiating. WpMtx3 (+8) vs. dragon"
+},{
+  "name": "Dragon Claws+",
+  "type": "brawld",
+  "magic": false,
+  "mt": 4,
+  "hit": 85,
+  "crit": 5,
+  "wt": 7,
+  "note": "Hit 2x when initiating. WpMtx3 (+8) vs. dragon"
+},{
+  "name": "Vajra-Mushti",
+  "type": "brawlg",
+  "magic": false,
+  "mt": 7,
+  "hit": 90,
+  "crit": 10,
+  "wt": 7,
+  "note": "Hit 2x when initiating. Crest of Chevalier"
+},{
+  "name": "Fire",
+  "type": "reason",
+  "magic": true,
+  "mt": 3,
+  "hit": 90,
+  "crit": 0,
+  "wt": 3,
+  "note": ""
+},{
+  "name": "Thunder",
+  "type": "reason",
+  "magic": true,
+  "mt": 4,
+  "hit": 80,
+  "crit": 5,
+  "wt": 4,
+  "note": ""
+},{
+  "name": "Wind",
+  "type": "reason",
+  "magic": true,
+  "mt": 2,
+  "hit": 100,
+  "crit": 10,
+  "wt": 2,
+  "note": "WpMtx3 (+4) vs. flying"
+},{
+  "name": "Blizzard",
+  "type": "reason",
+  "magic": true,
+  "mt": 3,
+  "hit": 70,
+  "crit": 15,
+  "wt": 4,
+  "note": ""
+},{
+  "name": "Bolganone",
+  "type": "reason",
+  "magic": true,
+  "mt": 8,
+  "hit": 85,
+  "crit": 0,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Thoron",
+  "type": "reason",
+  "magic": true,
+  "mt": 9,
+  "hit": 75,
+  "crit": 10,
+  "wt": 7,
+  "note": ""
+},{
+  "name": "Cutting Gale",
+  "type": "reason",
+  "magic": true,
+  "mt": 7,
+  "hit": 95,
+  "crit": 10,
+  "wt": 5,
+  "note": "WpMtx3 (+14) vs. flying"
+},{
+  "name": "Sagittae",
+  "type": "reason",
+  "magic": true,
+  "mt": 7,
+  "hit": 90,
+  "crit": 5,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Haglvejr",
+  "type": "reason",
+  "magic": true,
+  "mt": 7,
+  "hit": 75,
+  "crit": 15,
+  "wt": 6,
+  "note": ""
+},{
+  "name": "Bolting",
+  "type": "reason",
+  "magic": true,
+  "mt": 12,
+  "hit": 65,
+  "crit": 15,
+  "wt": 18,
+  "note": ""
+},{
+  "name": "Excalibur",
+  "type": "reason",
+  "magic": true,
+  "mt": 11,
+  "hit": 100,
+  "crit": 15,
+  "wt": 8,
+  "note": "WpMtx3 (+22) vs. flying"
+},{
+  "name": "Fimbulvetr",
+  "type": "reason",
+  "magic": true,
+  "mt": 12,
+  "hit": 65,
+  "crit": 25,
+  "wt": 10,
+  "note": ""
+},{
+  "name": "Meteor",
+  "type": "reason",
+  "magic": true,
+  "mt": 10,
+  "hit": 80,
+  "crit": 0,
+  "wt": 19,
+  "note": ""
+},{
+  "name": "Ragnarok",
+  "type": "reason",
+  "magic": true,
+  "mt": 15,
+  "hit": 80,
+  "crit": 5,
+  "wt": 9,
+  "note": ""
+},{
+  "name": "Agnea’s Arrow",
+  "type": "reason",
+  "magic": true,
+  "mt": 16,
+  "hit": 70,
+  "crit": 5,
+  "wt": 13,
+  "note": ""
+},{
+  "name": "Miasma Δ",
+  "type": "dark",
+  "magic": true,
+  "mt": 5,
+  "hit": 80,
+  "crit": 0,
+  "wt": 5,
+  "note": ""
+},{
+  "name": "Mire B",
+  "type": "dark",
+  "magic": true,
+  "mt": 3,
+  "hit": 70,
+  "crit": 0,
+  "wt": 5,
+  "note": "Foe Def -5 for 1 turn"
+},{
+  "name": "Swarm Z",
+  "type": "dark",
+  "magic": true,
+  "mt": 4,
+  "hit": 70,
+  "crit": 0,
+  "wt": 5,
+  "note": "Foe Spd -5 for 1 turn"
+},{
+  "name": "Banshee Θ",
+  "type": "dark",
+  "magic": true,
+  "mt": 9,
+  "hit": 75,
+  "crit": 5,
+  "wt": 9,
+  "note": "Foe Mvt -5 for 1 turn"
+},{
+  "name": "Death Γ",
+  "type": "dark",
+  "magic": true,
+  "mt": 6,
+  "hit": 70,
+  "crit": 20,
+  "wt": 8,
+  "note": ""
+},{
+  "name": "Luna Λ",
+  "type": "dark",
+  "magic": true,
+  "mt": 1,
+  "hit": 65,
+  "crit": 0,
+  "wt": 7,
+  "note": "Ignores foe res (calculate dmg by hand). Can’t double"
+},{
+  "name": "Dark Spikes T",
+  "type": "dark",
+  "magic": true,
+  "mt": 13,
+  "hit": 80,
+  "crit": 0,
+  "wt": 11,
+  "note": "WpMtx3 (+26) vs. cavalry"
+},{
+  "name": "Hades Ω",
+  "type": "dark",
+  "magic": true,
+  "mt": 18,
+  "hit": 65,
+  "crit": 10,
+  "wt": 16,
+  "note": ""
+},{
+  "name": "Heal",
+  "type": "faithH",
+  "magic": true,
+  "mt": 8,
+  "hit": 100,
+  "crit": 0,
+  "wt": 0,
+  "note": ""
+},{
+  "name": "Nosferatu",
+  "type": "faithA",
+  "magic": true,
+  "mt": 1,
+  "hit": 80,
+  "crit": 0,
+  "wt": 8,
+  "note": "Restores dmg/2"
+},{
+  "name": "Recover",
+  "type": "faithH",
+  "magic": true,
+  "mt": 30,
+  "hit": 100,
+  "crit": 0,
+  "wt": 0,
+  "note": ""
+},{
+  "name": "Seraphim",
+  "type": "faithA",
+  "magic": true,
+  "mt": 8,
+  "hit": 75,
+  "crit": 5,
+  "wt": 10,
+  "note": "WpMtx3 vs. beasts"
+},{
+  "name": "Physic",
+  "type": "faithH",
+  "magic": true,
+  "mt": 8,
+  "hit": 100,
+  "crit": 0,
+  "wt": 0,
+  "note": "Range is 1 to mag/2"
+},{
+  "name": "Purge",
+  "type": "faithA",
+  "magic": true,
+  "mt": 10,
+  "hit": 75,
+  "crit": 0,
+  "wt": 15,
+  "note": "Range is 1 to mag/4"
+},{
+  "name": "Fortify",
+  "type": "faithH",
+  "magic": true,
+  "mt": 15,
+  "hit": 100,
+  "crit": 0,
+  "wt": 0,
+  "note": "Range is 1 to mag/4. Heals all in range"
+},{
+  "name": "Abraxas",
+  "type": "faithA",
+  "magic": true,
+  "mt": 14,
+  "hit": 80,
+  "crit": 5,
+  "wt": 13,
+  "note": ""
+},{
+  "name": "Aura",
+  "type": "faithA",
+  "magic": true,
+  "mt": 12,
+  "hit": 70,
+  "crit": 20,
+  "wt": 12,
+  "note": ""
+}]
