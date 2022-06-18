@@ -1,7 +1,7 @@
 import ReactTooltip from "react-tooltip";
-import './static/css/App.css';
+import '../static/css/App.css';
 
-const abilitiesData = require('./props/abilities.json');
+const abilitiesData = require('../props/abilities.json');
 
 let participant1 = "Yuri",
     participant2 = "Finley";
