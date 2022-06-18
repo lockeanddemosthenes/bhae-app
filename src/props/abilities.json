@@ -1,11 +1,581 @@
 [{
-  "id": "ABI0001",
   "name": "Armored Blow",
   "icon": "armored_blow",
   "desc": "Def+6 when initiating combat."
 },{
-  "id": "ABI0002",
   "name": "Avoid +10",
   "icon": "avoid_10",
   "desc": "Avo +10."
+},{
+  "name": "Axe Crit +10",
+  "icon": "axe_crit_10",
+  "desc": "Crit +10 when using an axe."
+},{
+  "name": "Axefaire",
+  "icon": "axefaire",
+  "desc": "Mt +5 when using an axe."
+},{
+  "name": "Bowfaire",
+  "icon": "bowfaire",
+  "desc": "Mt +5 when using a bow."
+},{
+  "name": "Bowrange +1",
+  "icon": "bowrange_1",
+  "desc": "Increases range of bows by 1."
+},{
+  "name": "Bowrange +2",
+  "icon": "bowrange+2",
+  "desc": "Increases range of bows by 2."
+},{
+  "name": "Brawl Avo +20",
+  "icon": "brawl_avo_20",
+  "desc": "Avo +20 when brawling."
+},{
+  "name": "Canto",
+  "icon": "canto",
+  "desc": "After performing an action, user can use their leftover movement."
+},{
+  "name": "Charm",
+  "icon": "charm",
+  "desc": "When allies adjacent to the unit enter combat, they gain +3 dmg."
+},{
+  "name": "Locktouch",
+  "icon": "locktouch",
+  "desc": "Unit can open locks and chests without keys."
+},{
+  "name": "Steal",
+  "icon": "steal",
+  "desc": "Unit can steal non-weapon items from enemies with lower Spd."
+},{
+  "name": "Battalion Vantage",
+  "icon": "battalion_vantage",
+  "desc": "If unit's HP ≤ ⅓, unit always attacks first."
+},{
+  "name": "Battalion Wrath",
+  "icon": "battalion_wrath",
+  "desc": "If foe initiates combat while unit’s HP ≤ ⅓, grants Crit +50."
+},{
+  "name": "Battalion Desperation",
+  "icon": "battalion_desperation",
+  "desc": "If unit initiates combat while HP ≤ ⅓, unit’s follow-up attack (if possible) occurs before foe’s counterattack."
+},{
+  "name": "Offensive Tactics",
+  "icon": "offensive_tactics",
+  "desc": "Mt +5 and Hit+20 with gambits."
+},{
+  "name": "Axebreaker",
+  "icon": "axebreaker",
+  "desc": "Hit/Avo +20 when using a sword against axe users."
+},{
+  "name": "Sword Crit +10",
+  "icon": "sword_crit_10",
+  "desc": "Crit +10 when using a sword."
+},{
+  "name": "Honorable Spirit",
+  "icon": "honorable_spirit",
+  "desc": "If unit is not adjacent to an ally, grants Mt +3 when in combat with an adjacent foe."
+},{
+  "name": "Critical +20",
+  "icon": "crit_20",
+  "desc": "Crit +20"
+},{
+  "name": "Death Blow",
+  "icon": "death_blow",
+  "desc": "Str +6 when initiating combat."
+},{
+  "name": "Defiant Avo",
+  "icon": "defiant_avo",
+  "desc": "Avo +30 when HP ≤ 25%."
+},{
+  "name": "Duelist’s Blow",
+  "icon": "duelists_blow",
+  "desc": "Avo +20 when initiating combat."
+},{
+  "name": "Faith Magic Heal +5",
+  "icon": "faith_magic_heal_5",
+  "desc": "White magic heals HP +5."
+},{
+  "name": "Faith Magic Heal +10",
+  "icon": "faith_magic_heal_10",
+  "desc": "White magic heals HP +10."
+},{
+  "name": "Faith Magic Uses x2",
+  "icon": "faith_magic_uses_2",
+  "desc": "Doubles the number of uses of Faith spells."
+},{
+  "name": "Faith Tomefaire",
+  "icon": "faith_tomefaire",
+  "desc": "Mt +5 when faith magic is equipped."
+},{
+  "name": "Fiendish Blow",
+  "icon": "fiendish_blow",
+  "desc": "Mag +6 when initiating combat."
+},{
+  "name": "Fire",
+  "icon": "fire",
+  "desc": "Enables the use of Fire. If already learned, doubles the amount of uses."
+},{
+  "name": "Fistfaire",
+  "icon": "fistfaire",
+  "desc": "Mt +5 when using gauntlets."
+},{
+  "name": "Heal",
+  "icon": "heal",
+  "desc": "Unit can use heal. If already learned, doubles the number of uses."
+},{
+  "name": "Heartseeker",
+  "icon": "heartseeker",
+  "desc": "ReducesA vo of adjacent foes by 20."
+},{
+  "name": "Lancefaire",
+  "icon": "lancefaire",
+  "desc": "Mt +5 when using a lance."
+},{
+  "name": "Lethality",
+  "icon": "lethality",
+  "desc": "(Dex/4)% chance to instantly kill foe when dealing damage."
+},{
+  "name": "Lifetaker",
+  "icon": "lifetaker",
+  "desc": "Recovers HP equal to 50% of damage dealt after defeating a foe."
+},{
+  "name": "Miasma Δ",
+  "icon": "miasma_Δ",
+  "desc": "Enables the use of Miasma Δ. If already learned, doubles the number of uses."
+},{
+  "name": "Seal Defense",
+  "icon": "seal_defense",
+  "desc": "If unit damages foe during combat, foe suffers Def -6 for 1 turn after combat."
+},{
+  "name": "Seal Resistance",
+  "icon": "seal_resistance",
+  "desc": "If unit damages foe during combat, foe suffers Res -6 for 1 turn after combat."
+},{
+  "name": "Seal Speed",
+  "icon": "seal_speed",
+  "desc": "If unit damages foe during combat, foe suffers Spd -6 for 1 turn after combat."
+},{
+  "name": "Seal Strength",
+  "icon": "seal_strength",
+  "desc": "If unit damages foe during combat, foe suffers Str -6 for 1 turn after combat."
+},{
+  "name": "Swordfaire",
+  "icon": "swordfaire",
+  "desc": "Mt +5 when using a sword."
+},{
+  "name": "Terrain Resistance",
+  "icon": "terrain_resistance",
+  "desc": "Unit does not receive terrain damage."
+},{
+  "name": "Uncanny Blow",
+  "icon": "uncanny_blow",
+  "desc": "Hit +30 when initiating combat."
+},{
+  "name": "Reason Tomefaire",
+  "icon": "reason_tomefaire",
+  "desc": "Mt +5 when Reason magic is equipped."
+},{
+  "name": "Reason Magic Uses x2",
+  "icon": "reason_magic_uses_2",
+  "desc": "Doubles the number of uses of Reason spells."
+},{
+  "name": "Renewal",
+  "icon": "renewal",
+  "desc": "Unit recovers up to 20% of max HP at the start of each turn."
+},{
+  "name": "Unarmed Combat",
+  "icon": "unarmed_combat",
+  "desc": "User can fight without a weapon equipped."
+},{
+  "name": "Vantage",
+  "icon": "vantage",
+  "desc": "Always attack first when under 50% HP."
+},{
+  "name": "Weight -5",
+  "icon": "weight_5",
+  "desc": "The combined weight of equipment is reduced by 5."
+},{
+  "name": "Wrath",
+  "icon": "wrath",
+  "desc": "If foe initiates combat while unit’s HP is ≤ 50%, Crit +50."
+},{
+  "name": "Lance Crit +10",
+  "icon": "lance_crit_10",
+  "desc": "Crit +10 when using a Lance"
+},{
+  "name": "Swordbreaker",
+  "icon": "swordbreaker",
+  "desc": "Grants Hit/Avo +20 when using a lance against sword users."
+},{
+  "name": "Lancebreaker",
+  "icon": "lancebreaker",
+  "desc": "Grants Hit/Avo +20 when using an axe against lance users."
+},{
+  "name": "Close Counter",
+  "icon": "close_counter",
+  "desc": "Allows unit to counterattack adjacent foes."
+},{
+  "name": "Fistbreaker",
+  "icon": "fistbreaker",
+  "desc": "Grants Hit/Avo +20 when using a bow against gauntlet users."
+},{
+  "name": "Bow Crit +10",
+  "icon": "bow_crit_10",
+  "desc": "Crit +10 when using a Bow."
+},{
+  "name": "Tomebreaker",
+  "icon": "tomebreaker",
+  "desc": "Grants Hit/Avo +20 when using gauntlets against magic users."
+},{
+  "name": "Brawl Crit +10",
+  "icon": "brawl_crit_10",
+  "desc": "Crit +10 when using Gauntlets"
+},{
+  "name": "Bowbreaker",
+  "icon": "bowbreaker",
+  "desc": "Grants Hit/Avo +20 when using magic against bow users."
+},{
+  "name": "Reason Magic Range +1",
+  "icon": "reason_magic_range_1",
+  "desc": "Range +1 when Reason magic is equipped."
+},{
+  "name": "Faith Magic Range +1",
+  "icon": "faith_magic_range_1",
+  "desc": "Range +1 when Faith magic is equipped."
+},{
+  "name": "Weight -3",
+  "icon": "weight_3",
+  "desc": "Total weight of equipment is reduced by 3."
+},{
+  "name": "Armored Effect Null",
+  "icon": "armored_effect_null",
+  "desc": "Nullifies extra effectiveness against armored units."
+},{
+  "name": "Dexterity +4",
+  "icon": "dexterity_4",
+  "desc": "Dex +4"
+},{
+  "name": "Movement +1",
+  "icon": "movement_1",
+  "desc": "Mvt +1"
+},{
+  "name": "Cavalry Effect Null",
+  "icon": "cavalry_effect_null",
+  "desc": "Nullifies extra effectiveness against cavalry units."
+},{
+  "name": "Alert Stance",
+  "icon": "alert_stance",
+  "desc": "If unit takes no action except Wait, grants Avo +15 for 1 turn."
+},{
+  "name": "Alert Stance+",
+  "icon": "alert_stance_+",
+  "desc": "If unit takes no action except Wait, grants Avo +30 for 1 turn."
+},{
+  "name": "Flying Effect Null",
+  "icon": "flying_effect_null",
+  "desc": "Nullifies extra effectiveness against cavalry units."
+},{
+  "name": "Commander",
+  "icon": "commander",
+  "desc": "Nullifies instant death effects, status effects, and movement effects, and reduces damage from enemy gambits to one-fourth."
+},{
+  "name": "Cursed Power",
+  "icon": "cursed_power",
+  "desc": "Unit recovers HP on swamp terrain."
+},{
+  "name": "Dragon Effect Null",
+  "icon": "dragon_effect_null",
+  "desc": "Nullifies extra effectiveness against dragons."
+},{
+  "name": "Effect Null",
+  "icon": "effect_null",
+  "desc": "Nullifies all effectiveness."
+},{
+  "name": "General",
+  "icon": "general",
+  "desc": "Nullifies instant death effects and halves damage from enemy gambits."
+},{
+  "name": "Giant Wings",
+  "icon": "giant_wings",
+  "desc": "+30 Avo sword, lance, and axe-wielding foes when barrier is active."
+},{
+  "name": "Immune Status",
+  "icon": "immune_status",
+  "desc": "Nullifies status effects and debuffs."
+},{
+  "name": "Infantry Effect Null",
+  "icon": "infantry_effect_null",
+  "desc": "Nullifies extra effectiveness against infantry."
+},{
+  "name": "Keen Intuition",
+  "icon": "keen_intuition",
+  "desc": "+30 Avo when enemies are 2 or more spaces away."
+},{
+  "name": "Magic Bind",
+  "icon": "magic_bind",
+  "desc": "If unit lands a hit, targeted foe is unable to use magic for 1 turn."
+},{
+  "name": "Monster Effect Null",
+  "icon": "monster_effect_null",
+  "desc": "Nullifies extra effectiveness against monsters."
+},{
+  "name": "Poison",
+  "icon": "poison",
+  "desc": "Chance to inflict poison on foe when dealing damage. Trigger % = Dex stat."
+},{
+  "name": "Surging Light",
+  "icon": "surging_light",
+  "desc": "Performs staggering blows immediately."
+},{
+  "name": "Vital Defense",
+  "icon": "vital_defense",
+  "desc": "Negates critical hits against the user when barrier is active."
+},{
+  "name": "Professor’s Guidance",
+  "icon": "professors_guidance",
+  "desc": "+20 XP gained to unit and adjacent allies."
+},{
+  "name": "Royal Lineage",
+  "icon": "royal_lineage",
+  "desc": "+20 XP gained."
+},{
+  "name": "Live to Serve",
+  "icon": "live_to_serve",
+  "desc": "When healing allies, unit is healed by the same amount."
+},{
+  "name": "Staunch Shield",
+  "icon": "staunch_shield",
+  "desc": "If unit waits, +4 Def for 1 turn."
+},{
+  "name": "Lone Wolf",
+  "icon": "lone_wolf",
+  "desc": "When no battalion deployed, Mt +5."
+},{
+  "name": "Perseverance",
+  "icon": "perseverance",
+  "desc": "Rally grants +4 Str."
+},{
+  "name": "Philanderer",
+  "icon": "philanderer",
+  "desc": "Dmg dealt +2, dmg received -2 when adjacent to female ally."
+},{
+  "name": "Lady Knight",
+  "icon": "lady_knight",
+  "desc": "When using a Gambit, Mt +3, Hit Rate +5."
+},{
+  "name": "Martyr",
+  "icon": "martyr",
+  "desc": "While HP < 50%, grants +20 Crit to adjacent allies."
+},{
+  "name": "Strife Seeker",
+  "icon": "strife_seeker",
+  "desc": "While this unti’s HP < 50%, unit gains +3 Mt and +10 Avo."
+},{
+  "name": "Guardian’s Vigil",
+  "icon": "guardians_vigil",
+  "desc": "While HP > 50%, enemies cannot pass through adjacent tiles."
+},{
+  "name": "Adapt and Overcome",
+  "icon": "adapt_and_overcome",
+  "desc": "After taking a physical attack, +3 Def. After a magical attack, +3 Res. Only one active at a time. Lasts one turn."
+},{
+  "name": "Natural Born Leader",
+  "icon": "natural_born_leader",
+  "desc": "Gambit Mt +5."
+},{
+  "name": "Distaste",
+  "icon": "distaste",
+  "desc": "Mt +3 against male enemies."
+},{
+  "name": "Imperial Lineage",
+  "icon": "imperial_lineage",
+  "desc": "+20% XP gained."
+},{
+  "name": "Officer Duty",
+  "icon": "officer_duty",
+  "desc": "Gambit Mt +5."
+},{
+  "name": "Songstress",
+  "icon": "songstress",
+  "desc": "At the start of each turn, restores adjacent allies’ HP by 10%."
+},{
+  "name": "Confidence",
+  "icon": "confidence",
+  "desc": "When HP is full, Hit/Avo +15."
+},{
+  "name": "Persecution Complex",
+  "icon": "perseuction_complex",
+  "desc": "When HP is not full, Mt +5."
+},{
+  "name": "Hunter’s Boon",
+  "icon": "hunters_boon",
+  "desc": "When foe has less than 50% HP, Crit +20."
+},{
+  "name": "Born Fighter",
+  "icon": "born_fighter",
+  "desc": "Avo -10 to adjacent foes."
+},{
+  "name": "Catnap",
+  "icon": "catnap",
+  "desc": "If unit waits, restores 10% HP."
+},{
+  "name": "Cheerful Spirit",
+  "icon": "cheeful_spirit",
+  "desc": "Rally giants +3 Mag and +3 Str."
+},{
+  "name": "Motherly",
+  "icon": "motherly",
+  "desc": "Raises Mt and Def of adjacent allies by 3 when their health is lower than 50%."
+},{
+  "name": "Never Reveal Your Secret",
+  "icon": "never_reveal_your_secret",
+  "desc": "Half of the overkill damage done to an enemy unit will heal this unit."
+},{
+  "name": "Disarm With Charm",
+  "icon": "disarm_with_charm",
+  "desc": "Hit -10 to adjacent foes."
+},{
+  "name": "Breath of Life",
+  "icon": "breath_of_life",
+  "desc": "After the unit initiates combat, heal all adjacent allies by 5 HP."
+},{
+  "name": "Dauntless",
+  "icon": "dauntless",
+  "desc": "While this unit has 2+ enemies and no allies within 2 spaces, +10 Avo and +3 Mt."
+},{
+  "name": "One Step Ahead",
+  "icon": "one_step_ahead",
+  "desc": "Lck% chance of countering before the enemy attacks."
+},{
+  "name": "Leicester Lineage",
+  "icon": "leicester_lineage",
+  "desc": "+20% XP gained."
+},{
+  "name": "Advocate",
+  "icon": "advocate",
+  "desc": "+3 dmg dealt by adjacent male allies."
+},{
+  "name": "Distinguished House",
+  "icon": "distinguished_house",
+  "desc": "Dmg +2 when a battalion is deployed."
+},{
+  "name": "Goody Basket",
+  "icon": "goody_basket",
+  "desc": "At start of turn, unit has Lck% chance of recovering 10% HP."
+},{
+  "name": "Mastermind",
+  "icon": "mastermind",
+  "desc": "Unit gains 2x skill XP from combat."
+},{
+  "name": "Watchful Eye",
+  "icon": "watchful_eye",
+  "desc": "Hit +20."
+},{
+  "name": "Animal Friend",
+  "icon": "animal_friend",
+  "desc": "At start of turn,restores 20% HP when adjacent to horseback or flying ally."
+},{
+  "name": "Rivalry",
+  "icon": "rivalry",
+  "desc": "Dmg dealt +2, dmg received -2 when adjacent to male ally."
+},{
+  "name": "Exotic Dance",
+  "icon": "exotic_dance",
+  "desc": "If unit isn’t mounted, they may take the dance action to refresh allied units."
+},{
+  "name": "Three’s a Crowd",
+  "icon": "threes_a_crowd",
+  "desc": "If unit has exactly one ally adjacent to her at the start of the turn, the ally gains 10% of their HP, and unit takes -3 damage until their next turn."
+},{
+  "name": "Cat’s Claws",
+  "icon": "cats_claws",
+  "desc": "When HP < 50%, Crit +15"
+},{
+  "name": "Infirmary Master",
+  "icon": "infirmary_master",
+  "desc": "Adjacent allies gain Crit Avo +10 during combat."
+},{
+  "name": "Guardian",
+  "icon": "guardian",
+  "desc": "+3 Mt to adjacent female allies during combat."
+},{
+  "name": "Lily’s Poise",
+  "icon": "lilys_poise",
+  "desc": "-3 Dmg to adjacent allies during combat."
+},{
+  "name": "Fighting Spirit",
+  "icon": "fighting_spirit",
+  "desc": "-5 Dmg taken when no battalion is deployed."
+},{
+  "name": "Survival Instinct",
+  "icon": "survival_instinct",
+  "desc": "If unit initiates combat and defeats foe, grants Str/Mag/Dex/Spd +4 for one turn."
+},{
+  "name": "Compassion",
+  "icon": "compassion",
+  "desc": "Rally grants ally Lck +8"
+},{
+  "name": "Aptitude",
+  "icon": "aptitude",
+  "desc": "Boosts growth rates during Level Ups by 20%."
+},{
+  "name": "Murderous Intent",
+  "icon": "murderous_intent",
+  "desc": "Hit +20 when initiating combat."
+},{
+  "name": "Veteran Knight",
+  "icon": "veteran_knight",
+  "desc": "-2 Dmg taken if a battalion is deployed."
+},{
+  "name": "Shining Ninja",
+  "icon": "shining_ninja",
+  "desc": "If unit waits, Mt +2 to adjacent allies. If no adjacent allies, Mt +3 to self."
+},{
+  "name": "Nine Lives",
+  "icon": "nine_lives",
+  "desc": "When HP > 50%, survive any OHKO with 1 HP."
+},{
+  "name": "Snacktime Preparation",
+  "icon": "snacktime_perparation",
+  "desc": "If unit waits, restores 10% HP."
+},{
+  "name": "Song of Rest",
+  "icon": "song_of_rest",
+  "desc": "At the start of each turn, restores adjacent allies’ HP by 10%."
+},{
+  "name": "Sturdy Stance",
+  "icon": "sturdy_stance",
+  "desc": "If foe initiates attack, +2 Str/Def."
+},{
+  "name": "Circadian Beat",
+  "icon": "circadian_beat",
+  "desc": "Str/Mag +3 when indoors, Def/Res +3 when outdoors."
+},{
+  "name": "Monstrous Appeal",
+  "icon": "monstrous_appeal",
+  "desc": "Mt x3 vs monsters, monsters more likely to target unit."
+},{
+  "name": "King of Grappling",
+  "icon": "king_of_grappling",
+  "desc": "Str/Def +6 when HP > 50%."
+},{
+  "name": "Devotion",
+  "icon": "devotion",
+  "desc": "-3 Dmg to adjacent allies during combat."
+},{
+  "name": "Optimist",
+  "icon": "optimist",
+  "desc": "When adjacent to more than one foe when initiating combat, Avo/Hit +10 and Mt +3."
+},{
+  "name": "Hypeman",
+  "icon": "hypeman",
+  "desc": "Crit +5 when a battalion is equipped."
+},{
+  "name": "Arcane Intuition",
+  "icon": "arcane_intuition",
+  "desc": "Avo +10 when enemy initiates combat."
+},{
+  "name": "None",
+  "icon": "na",
+  "desc": ""
 }]
