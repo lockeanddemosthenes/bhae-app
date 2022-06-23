@@ -1,0 +1,166 @@
+[
+  {
+    "label": "Black Eagles",
+    "options": [
+      {
+        "name": "Edelgard",
+        "weapon": "Training Axe",
+        "lv": 15,
+        "crestName": "Seiros",
+        "crestDesc": "Minor Crest of Seiros / Major Crest of Flames\n4 on d10 / 2 on d10\nRaises Mt by 5 when using combat arts. / Restores HP equal to 30% of damage dealt.\n",
+        "abilities": [
+          {
+            "ab1": "na",
+            "ab2": "na",
+            "ab3": "na",
+            "ab4": "na",
+            "ab5": "na",
+            "ab6": "na",
+            "ab7": "na",
+            "ab8": "na",
+            "ab9": "na",
+            "ab10": "na",
+            "ab11": "na",
+            "ab12": "na",
+            "ab13": "na",
+            "ab14": "na"
+          }
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      },{
+        "name": "Hubert",
+        "weapon": "Mire B",
+        "lv": 15,
+        "crestName": "na",
+        "crestDesc": "",
+        "abilities": [
+          {
+            "ab1": "na",
+            "ab2": "na",
+            "ab3": "na",
+            "ab4": "na",
+            "ab5": "na",
+            "ab6": "na",
+            "ab7": "na",
+            "ab8": "na",
+            "ab9": "na",
+            "ab10": "na",
+            "ab11": "na",
+            "ab12": "na",
+            "ab13": "na",
+            "ab14": "na"
+          }
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Blue Lions",
+    "options": [
+      {
+        "name": "Dimitri",
+        "weapon": "Training Lance",
+        "lv": 15,
+        "crestName": "Blaiddyd",
+        "crestDesc": "Minor Crest of Blaiddyd\n1 on d10\nDoubles Mt and uses consumed when using combat arts.\n",
+        "abilities": [
+          {
+            "ab1": "na",
+            "ab2": "na",
+            "ab3": "na",
+            "ab4": "na",
+            "ab5": "na",
+            "ab6": "na",
+            "ab7": "na",
+            "ab8": "na",
+            "ab9": "na",
+            "ab10": "na",
+            "ab11": "na",
+            "ab12": "na",
+            "ab13": "na",
+            "ab14": "na"
+          }
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      },{
+        "name": "Dedue",
+        "weapon": "Training Axe",
+        "lv": 15,
+        "crestName": "na",
+        "crestDesc": "",
+        "abilities": [
+          {
+            "ab1": "na",
+            "ab2": "na",
+            "ab3": "na",
+            "ab4": "na",
+            "ab5": "na",
+            "ab6": "na",
+            "ab7": "na",
+            "ab8": "na",
+            "ab9": "na",
+            "ab10": "na",
+            "ab11": "na",
+            "ab12": "na",
+            "ab13": "na",
+            "ab14": "na"
+          }
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      }
+    ]
+  }
+]
