@@ -4,6 +4,34 @@ import ReactTooltip from "react-tooltip";
 const CombatArtsData = require('../props/combat_arts.json');
 const UnitsData = require('../props/unitsTemp.json');
 
+
+//let getUnitWep = UnitsData.map(function(e) { return e.options[0].name; }).indexOf("Edelgard");
+
+/**
+ * @param unit
+ * @returns {number[]}
+ *
+ * The most unfortunate for(for(if()) garbage I've had to write. possibly clean up someday
+ * O(h*u), with u being number of units per house (~15 max) and h being number of houses (5)
+ *
+ */
+function getUnitInd(unit) {
+    for(let houseIndex=0; houseIndex < UnitsData.length; houseIndex++) {
+        for(let unitIndex=0; unitIndex < UnitsData.length; unitIndex++) {
+            if(UnitsData[houseIndex].options[unitIndex].name === unit) {
+                return [houseIndex, unitIndex];
+            }
+        }
+    }
+}
+
+function getUnitWep(unit) {
+    let unitIndArr = getUnitInd(unit);
+    return UnitsData[unitIndArr[0]].options[unitIndArr[1]].weapon;
+}
+
+console.log(getUnitWep("Edelgard"));
+
 function Settings() {
     return (
         <div className="Settings">
@@ -15,7 +43,8 @@ function Settings() {
                     <Select //menuIsOpen = {true}
                         options={UnitsData}
                         defaultValue={UnitsData[0].options[0]}
-                        getOptionLabel={(option) => `${option.name}`}
+                        getOptionLabel={(option) => option.name}
+                        getOptionValue={(option) => option.name}
                         theme={(theme) => ({
                             ...theme,
                             baseUnit: 50,

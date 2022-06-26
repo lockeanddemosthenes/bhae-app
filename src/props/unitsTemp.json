@@ -78,6 +78,44 @@
             "wt": 0
           }
         ]
+      },{
+        "name": "Linhardt",
+        "weapon": "Nosferatu",
+        "lv": 15,
+        "crestName": "Cethleann",
+        "crestDesc": "Minor Crest of Cethleann\nI forgor",
+        "abilities": [
+          {
+            "ab1": "na",
+            "ab2": "na",
+            "ab3": "na",
+            "ab4": "na",
+            "ab5": "na",
+            "ab6": "na",
+            "ab7": "na",
+            "ab8": "na",
+            "ab9": "na",
+            "ab10": "na",
+            "ab11": "na",
+            "ab12": "na",
+            "ab13": "na",
+            "ab14": "na"
+          }
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
       }
     ]
   },
