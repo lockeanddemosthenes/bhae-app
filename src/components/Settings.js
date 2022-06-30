@@ -7,7 +7,7 @@ const CombatArtsData = require('../props/combat_arts.json');
 const UnitsData = require('../props/unitsTemp.json');
 
 function useShareableState() {
-    const [unit1, setUnit1] = useState("Hubert");
+    const [unit1, setUnit1] = useState("Edelgard");
     const [unit2, setUnit2] = useState("Edelgard");
     return {
         unit1,
@@ -21,7 +21,7 @@ function useShareableState() {
  * @param unit
  * @returns {number[]}
  *
- * The most unfortunate for(for(if()) garbage I've had to write. possibly clean up someday
+ * The second-most unfortunate for(for(if()) garbage I've had to write. possibly clean up someday
  * O(h*u), with u being number of units per house (~15 max) and h being number of houses (5)
  *
  */
@@ -44,11 +44,11 @@ function Settings() {
     const { unit1, setUnit1, unit2, setUnit2 } = useBetween(useShareableState);
 
     function handleUnit1(e) {
-        setUnit1(e.target.value);
+        setUnit1(e.name);
     }
 
     function handleUnit2(e) {
-        setUnit2(e.target.value);
+        setUnit2(e.name);
     }
 
     console.log(getUnitWep(unit1));
@@ -65,7 +65,7 @@ function Settings() {
                         options={UnitsData}
                         defaultValue={UnitsData[0].options[0]}
                         getOptionLabel={(option) => option.name}
-                        getOptionValue={(option) => option.name}
+                        onChange={handleUnit1}
                         theme={(theme) => ({
                             ...theme,
                             baseUnit: 50,
@@ -103,6 +103,7 @@ function Settings() {
                         options={UnitsData}
                         defaultValue={UnitsData[0].options[0]}
                         getOptionLabel={(option) => `${option.name}`}
+                        onChange={handleUnit2}
                         theme={(theme) => ({
                             ...theme,
                             baseUnit: 50,
@@ -171,82 +172,89 @@ function Settings() {
             <button id="fightBtn">Fight!</button>
             <button id="changeWpnBtn">Change Weapon</button>
             <br/>
+            <br />
+            <ResultDisplay />
         </div>
     );
 }
 
-// function ResultDisplay(props) {
-//     return (
-//         <div className="Results">
-//             <div className="Participant1">
-//                 <div className="UnitIconContainer">
-//                     <div>
-//                         <img src={process.env.PUBLIC_URL + '/img/sprite/' + props.unit1.name + '.png'} className="unit-icon" alt={participant1} data-tip={p1Tip}/>
-//                     </div>
-//                     <div className="cwe-icons">
-//                         <img src={process.env.PUBLIC_URL + '/img/crest/aubin.png'} className="crest-icon" alt={abilityName} data-tip="Aubin (2): yeah"/>
-//                         <br />
-//                         <img src={process.env.PUBLIC_URL + '/img/wep/swordd.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>
-//                         <br />
-//                         <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
-//                     </div>
-//                 </div>
-//                 <br />
-//
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <br />
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <br />
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//             </div>
-//
-//             <div className="Calculations">
-//                 <p>{participant1} attacks {participant2} with WEAPON LOL!</p>
-//             </div>
-//
-//             <div className="Participant2">
-//                 <div className="UnitIconContainer">
-//                     <div>
-//                         <img src={process.env.PUBLIC_URL + '/img/sprite/' + participant2 + '.png'} className="unit-icon" alt={participant2} data-tip={p2Tip}/>
-//                     </div>
-//                     <div className="cwe-icons">
-//                         <img src={process.env.PUBLIC_URL + '/img/crest/none.png'} className="crest-icon" alt={abilityName} data-tip="CRESTLESS BUFFOON"/>
-//                         <br />
-//                         <img src={process.env.PUBLIC_URL + '/img/wep/lanced.png'} className="wep-icon" alt={abilityName} data-tip="uhhh funny lance"/>
-//                         <br />
-//                         <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
-//                     </div>
-//                 </div>
-//                 <br />
-//
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <br />
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <br />
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//                 <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>
-//             </div>
-//
-//             <ReactTooltip className="toolTip" html={true} />
-//         </div>
-//     );
-// }
+function ResultDisplay() {
+    const { unit1, unit2 } = useBetween(useShareableState);
+
+    let p1Tip = "<b>" + unit1 + "</b>" + "<br/>Lv 13 Thief",
+        p2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider";
+
+    return (
+        <div className="Results">
+            <div className="Participant1">
+                <div className="UnitIconContainer">
+                    <div>
+                        <img src={process.env.PUBLIC_URL + '/img/sprite/' + unit1 + '.png'} className="unit-icon" alt={unit1} data-tip={p1Tip}/>
+                    </div>
+                    {/*<div className="cwe-icons">*/}
+                    {/*    <img src={process.env.PUBLIC_URL + '/img/crest/aubin.png'} className="crest-icon" alt={abilityName} data-tip="Aubin (2): yeah"/>*/}
+                    {/*    <br />*/}
+                    {/*    <img src={process.env.PUBLIC_URL + '/img/wep/swordd.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>*/}
+                    {/*    <br />*/}
+                    {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>*/}
+                    {/*</div>*/}
+                </div>
+                <br />
+
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <br />*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <br />*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            </div>
+
+            <div className="Calculations">
+                <p>{unit1} attacks {unit2} with WEAPON LOL!</p>
+            </div>
+
+            <div className="Participant2">
+                <div className="UnitIconContainer">
+                    <div>
+                        <img src={process.env.PUBLIC_URL + '/img/sprite/' + unit2 + '.png'} className="unit-icon" alt={unit2} data-tip={p2Tip}/>
+                    </div>
+                    {/*<div className="cwe-icons">*/}
+                    {/*    <img src={process.env.PUBLIC_URL + '/img/crest/none.png'} className="crest-icon" alt={abilityName} data-tip="CRESTLESS BUFFOON"/>*/}
+                    {/*    <br />*/}
+                    {/*    <img src={process.env.PUBLIC_URL + '/img/wep/lanced.png'} className="wep-icon" alt={abilityName} data-tip="uhhh funny lance"/>*/}
+                    {/*    <br />*/}
+                    {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>*/}
+                    {/*</div>*/}
+                </div>
+                <br />
+
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<br />*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<br />*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+            </div>
+
+            <ReactTooltip className="toolTip" html={true} />
+        </div>
+    );
+}
 
 export default Settings;
