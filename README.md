@@ -1,6 +1,13 @@
-# Getting Started with Create React ResultDisplay
+# BHaE Calculator 2.0
 
-This project was bootstrapped with [Create React ResultDisplay](https://github.com/facebook/create-react-app).
+quick summary here. hosted at [url here]
+
+Contact lockeanddemosthenes with bugs, questions, or other comments.
+
+##Tools
+
+This project was bootstrapped with [Create React](https://github.com/facebook/create-react-app).
+- React-Select
 
 ## Available Scripts
 

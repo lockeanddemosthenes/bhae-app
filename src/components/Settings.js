@@ -1,11 +1,21 @@
 import Select from "react-select";
 import ReactTooltip from "react-tooltip";
+import {useState} from "react";
+import { useBetween } from "use-between";
 
 const CombatArtsData = require('../props/combat_arts.json');
 const UnitsData = require('../props/unitsTemp.json');
 
-
-//let getUnitWep = UnitsData.map(function(e) { return e.options[0].name; }).indexOf("Edelgard");
+function useShareableState() {
+    const [unit1, setUnit1] = useState("Hubert");
+    const [unit2, setUnit2] = useState("Edelgard");
+    return {
+        unit1,
+        setUnit1,
+        unit2,
+        setUnit2
+    }
+}
 
 /**
  * @param unit
@@ -30,9 +40,19 @@ function getUnitWep(unit) {
     return UnitsData[unitIndArr[0]].options[unitIndArr[1]].weapon;
 }
 
-console.log(getUnitWep("Edelgard"));
-
 function Settings() {
+    const { unit1, setUnit1, unit2, setUnit2 } = useBetween(useShareableState);
+
+    function handleUnit1(e) {
+        setUnit1(e.target.value);
+    }
+
+    function handleUnit2(e) {
+        setUnit2(e.target.value);
+    }
+
+    console.log(getUnitWep(unit1));
+
     return (
         <div className="Settings">
             <h3>Settings</h3>
@@ -41,6 +61,7 @@ function Settings() {
                 <br />
                 <div style={{width: '242px', margin: '0 2.5rem 2rem 2.5rem'}}>
                     <Select //menuIsOpen = {true}
+                        id='participant1'
                         options={UnitsData}
                         defaultValue={UnitsData[0].options[0]}
                         getOptionLabel={(option) => option.name}
@@ -78,6 +99,7 @@ function Settings() {
                 <br />
                 <div style={{width: '242px', margin: '0 2.5rem 2rem 2.5rem'}}>
                     <Select //menuIsOpen = {true}
+                        id='participant2'
                         options={UnitsData}
                         defaultValue={UnitsData[0].options[0]}
                         getOptionLabel={(option) => `${option.name}`}
