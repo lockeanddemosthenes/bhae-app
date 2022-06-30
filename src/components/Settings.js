@@ -2,6 +2,7 @@ import Select from "react-select";
 import ReactTooltip from "react-tooltip";
 import {useState} from "react";
 import { useBetween } from "use-between";
+import {getUnitInd, getUnitWep} from "../functions/Calculations.js";
 
 const CombatArtsData = require('../props/combat_arts.json');
 const UnitsData = require('../props/unitsTemp.json');
@@ -17,29 +18,6 @@ function useShareableState() {
     }
 }
 
-/**
- * @param unit
- * @returns {number[]}
- *
- * The second-most unfortunate for(for(if()) garbage I've had to write. possibly clean up someday
- * O(h*u), with u being number of units per house (~15 max) and h being number of houses (5)
- *
- */
-function getUnitInd(unit) {
-    for(let houseIndex=0; houseIndex < UnitsData.length; houseIndex++) {
-        for(let unitIndex=0; unitIndex < UnitsData.length; unitIndex++) {
-            if(UnitsData[houseIndex].options[unitIndex].name === unit) {
-                return [houseIndex, unitIndex];
-            }
-        }
-    }
-}
-
-function getUnitWep(unit) {
-    let unitIndArr = getUnitInd(unit);
-    return UnitsData[unitIndArr[0]].options[unitIndArr[1]].weapon;
-}
-
 function Settings() {
     const { unit1, setUnit1, unit2, setUnit2 } = useBetween(useShareableState);
 
@@ -50,8 +28,6 @@ function Settings() {
     function handleUnit2(e) {
         setUnit2(e.name);
     }
-
-    console.log(getUnitWep(unit1));
 
     return (
         <div className="Settings">
@@ -182,7 +158,8 @@ function ResultDisplay() {
     const { unit1, unit2 } = useBetween(useShareableState);
 
     let p1Tip = "<b>" + unit1 + "</b>" + "<br/>Lv 13 Thief",
-        p2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider";
+        p2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider",
+        unit1wep = getUnitWep(unit1);
 
     return (
         <div className="Results">
@@ -218,7 +195,7 @@ function ResultDisplay() {
             </div>
 
             <div className="Calculations">
-                <p>{unit1} attacks {unit2} with WEAPON LOL!</p>
+                <p>{unit1} attacks {unit2} with {unit1wep}!</p>
             </div>
 
             <div className="Participant2">
