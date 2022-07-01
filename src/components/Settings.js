@@ -4,6 +4,7 @@ import {useState} from "react";
 import { useBetween } from "use-between";
 import {getUnitInd, getUnitWep} from "../functions/Calculations.js";
 
+const AbilitiesData = require('../props/abilities.json');
 const CombatArtsData = require('../props/combat_arts.json');
 const UnitsData = require('../props/unitsTemp.json');
 
@@ -19,6 +20,7 @@ function useShareableState() {
 }
 
 function Settings() {
+    console.log(getUnitInd("Linhardt"));
     const { unit1, setUnit1, unit2, setUnit2 } = useBetween(useShareableState);
 
     function handleUnit1(e) {
@@ -145,7 +147,6 @@ function Settings() {
                 <br />
             </form>
 
-            <button id="fightBtn">Fight!</button>
             <button id="changeWpnBtn">Change Weapon</button>
             <br/>
             <br />
@@ -161,20 +162,24 @@ function ResultDisplay() {
         p2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider",
         unit1wep = getUnitWep(unit1);
 
+    let abilityName = AbilitiesData[1].name,
+        abilityIcon = AbilitiesData[1].icon,
+        abilityDesc = "<b>" + abilityName + "</b><br />" + AbilitiesData[1].desc;
+
     return (
         <div className="Results">
             <div className="Participant1">
                 <div className="UnitIconContainer">
                     <div>
-                        <img src={process.env.PUBLIC_URL + '/img/sprite/' + unit1 + '.png'} className="unit-icon" alt={unit1} data-tip={p1Tip}/>
+                        <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit1 + '.png'} className="unit-portrait" alt={unit1} data-tip={p1Tip}/>
                     </div>
-                    {/*<div className="cwe-icons">*/}
-                    {/*    <img src={process.env.PUBLIC_URL + '/img/crest/aubin.png'} className="crest-icon" alt={abilityName} data-tip="Aubin (2): yeah"/>*/}
-                    {/*    <br />*/}
-                    {/*    <img src={process.env.PUBLIC_URL + '/img/wep/swordd.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>*/}
-                    {/*    <br />*/}
-                    {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>*/}
-                    {/*</div>*/}
+                    <div className="cwe-icons">
+                        <img src={process.env.PUBLIC_URL + '/img/crest/aubin.png'} className="crest-icon" alt={abilityName} data-tip="Aubin (2): yeah"/>
+                        <br />
+                        <img src={process.env.PUBLIC_URL + '/img/wep/swordd.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>
+                        <br />
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
+                    </div>
                 </div>
                 <br />
 
@@ -195,21 +200,21 @@ function ResultDisplay() {
             </div>
 
             <div className="Calculations">
-                <p>{unit1} attacks {unit2} with {unit1wep}!</p>
+                <p><b>{unit1}</b> attacks <b>{unit2}</b> with <b>{unit1wep}</b>!</p>
             </div>
 
             <div className="Participant2">
                 <div className="UnitIconContainer">
                     <div>
-                        <img src={process.env.PUBLIC_URL + '/img/sprite/' + unit2 + '.png'} className="unit-icon" alt={unit2} data-tip={p2Tip}/>
+                        <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit2 + '.png'} className="unit-portrait" alt={unit2} data-tip={p2Tip}/>
                     </div>
-                    {/*<div className="cwe-icons">*/}
-                    {/*    <img src={process.env.PUBLIC_URL + '/img/crest/none.png'} className="crest-icon" alt={abilityName} data-tip="CRESTLESS BUFFOON"/>*/}
-                    {/*    <br />*/}
-                    {/*    <img src={process.env.PUBLIC_URL + '/img/wep/lanced.png'} className="wep-icon" alt={abilityName} data-tip="uhhh funny lance"/>*/}
-                    {/*    <br />*/}
-                    {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>*/}
-                    {/*</div>*/}
+                    <div className="cwe-icons">
+                        <img src={process.env.PUBLIC_URL + '/img/crest/none.png'} className="crest-icon" alt={abilityName} data-tip="CRESTLESS BUFFOON"/>
+                        <br />
+                        <img src={process.env.PUBLIC_URL + '/img/wep/lanced.png'} className="wep-icon" alt={abilityName} data-tip="uhhh funny lance"/>
+                        <br />
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
+                    </div>
                 </div>
                 <br />
 

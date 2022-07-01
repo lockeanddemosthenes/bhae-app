@@ -13,7 +13,7 @@ html {
 body {
     font-size: 1.8rem;
     line-height: 1.618;
-    max-width: 38em;
+    max-width: 45em;
     margin: 25px auto;
     color: #ccc;
     padding: 30px;
@@ -243,6 +243,15 @@ input[type="checkbox"]:focus {
     border-color: rgba(255,255,255,0.8);
 }
 
+.Calculations {
+    font-size: 12pt;
+}
+
+.unit-portrait {
+    height: 9.65em;
+    object-fit: contain;
+}
+
 .unit-icon {
     height: 80px;
     padding-left: 1.2em;
@@ -250,10 +259,12 @@ input[type="checkbox"]:focus {
 
 .ability-icon {
     height: 30px;
+    object-fit: contain;
 }
 
 .cwe-icons {
     line-height: 1.2em;
+    padding-left: 1.2em;
 }
 
 .crest-icon {
@@ -273,12 +284,12 @@ input[type="checkbox"]:focus {
 
 .Results {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 3fr 2fr;
 }
 
 .UnitIconContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
 }
 
 /**
