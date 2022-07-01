@@ -1,8 +1,8 @@
 import Select from "react-select";
 import ReactTooltip from "react-tooltip";
-import {useState} from "react";
+import { useState } from "react";
 import { useBetween } from "use-between";
-import {getUnitInd, getUnitWep} from "../functions/Calculations.js";
+import { getUnitInd, getUnitWep } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
 const CombatArtsData = require('../props/combat_arts.json');

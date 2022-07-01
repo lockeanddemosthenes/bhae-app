@@ -1,4 +1,5 @@
-const UnitsData = require("../props/unitsTemp.json");
+const UnitsData = require("../props/unitsTemp.json"),
+    WepData = require("../props/weapons.json");
 
 /**
  * @param unit
@@ -13,6 +14,16 @@ export function getUnitInd(unit) {
         for(let unitIndex=0; unitIndex < UnitsData[houseIndex].options.length; unitIndex++) {
             if(UnitsData[houseIndex].options[unitIndex].name === unit) {
                 return [houseIndex, unitIndex];
+            }
+        }
+    }
+}
+
+export function getWepInd(wep) {
+    for(let typeIndex=0; typeIndex < WepData.length; typeIndex++) {
+        for(let wepIndex=0; wepIndex < WepData[typeIndex].options.length; wepIndex++) {
+            if(WepData[typeIndex].options[wepIndex].name === wep) {
+                return [typeIndex, wepIndex];
             }
         }
     }
