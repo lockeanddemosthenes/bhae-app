@@ -178,7 +178,7 @@ function ResultDisplay() {
                     <div className="cwe-icons">
                         <img src={process.env.PUBLIC_URL + '/img/crest/aubin.png'} className="crest-icon" alt={abilityName} data-tip="Aubin (2): yeah"/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>
+                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={unit1WepName} data-tip={unit1WepName}/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
@@ -213,7 +213,7 @@ function ResultDisplay() {
                     <div className="cwe-icons">
                         <img src={process.env.PUBLIC_URL + '/img/crest/none.png'} className="crest-icon" alt={abilityName} data-tip="CRESTLESS BUFFOON"/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>
+                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={unit2WepName} data-tip={unit2WepName}/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
