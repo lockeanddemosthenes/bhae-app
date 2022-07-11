@@ -2,7 +2,7 @@ import Select from "react-select";
 import ReactTooltip from "react-tooltip";
 import { useState } from "react";
 import { useBetween } from "use-between";
-import { getUnitInd, getUnitWep } from "../functions/Calculations.js";
+import { getUnitInd, getWepInd, getUnitWepName, getUnitCalcs, getWepType } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
 const CombatArtsData = require('../props/combat_arts.json');
@@ -20,7 +20,6 @@ function useShareableState() {
 }
 
 function Settings() {
-    console.log(getUnitInd("Linhardt"));
     const { unit1, setUnit1, unit2, setUnit2 } = useBetween(useShareableState);
 
     function handleUnit1(e) {
@@ -160,7 +159,10 @@ function ResultDisplay() {
 
     let p1Tip = "<b>" + unit1 + "</b>" + "<br/>Lv 13 Thief",
         p2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider",
-        unit1wep = getUnitWep(unit1);
+        unit1WepName = getUnitWepName(unit1),
+        unit1WepType = getWepType(unit1WepName),
+        unit2WepName = getUnitWepName(unit2),
+        unit2WepType = getWepType(unit2WepName);;
 
     let abilityName = AbilitiesData[1].name,
         abilityIcon = AbilitiesData[1].icon,
@@ -176,7 +178,7 @@ function ResultDisplay() {
                     <div className="cwe-icons">
                         <img src={process.env.PUBLIC_URL + '/img/crest/aubin.png'} className="crest-icon" alt={abilityName} data-tip="Aubin (2): yeah"/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/wep/swordd.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>
+                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
@@ -200,7 +202,7 @@ function ResultDisplay() {
             </div>
 
             <div className="Calculations">
-                <p><b>{unit1}</b> attacks <b>{unit2}</b> with <b>{unit1wep}</b>!</p>
+                <p><b>{unit1}</b> attacks <b>{unit2}</b> with <b>{unit1WepName}</b>!</p>
             </div>
 
             <div className="Participant2">
@@ -211,7 +213,7 @@ function ResultDisplay() {
                     <div className="cwe-icons">
                         <img src={process.env.PUBLIC_URL + '/img/crest/none.png'} className="crest-icon" alt={abilityName} data-tip="CRESTLESS BUFFOON"/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/wep/lanced.png'} className="wep-icon" alt={abilityName} data-tip="uhhh funny lance"/>
+                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={abilityName} data-tip="funny sword"/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
