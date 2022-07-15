@@ -2,7 +2,14 @@ import Select from "react-select";
 import ReactTooltip from "react-tooltip";
 import { useState } from "react";
 import { useBetween } from "use-between";
-import { getUnitInd, getWepInd, getUnitWepName, getUnitCalcs, getWepType } from "../functions/Calculations.js";
+import {
+    getUnitInd,
+    getWepInd,
+    getUnitWepName,
+    getUnitCalcs,
+    getWepType,
+    getUnitStats, getMt
+} from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
 const CombatArtsData = require('../props/combat_arts.json');
@@ -168,6 +175,9 @@ function ResultDisplay() {
         abilityIcon = AbilitiesData[1].icon,
         abilityDesc = "<b>" + abilityName + "</b><br />" + AbilitiesData[1].desc;
 
+    let unit1Mt = getMt(unit1, unit2),
+        unit2Mt = getMt(unit2, unit1);
+
     return (
         <div className="Results">
             <div className="Participant1">
@@ -203,6 +213,37 @@ function ResultDisplay() {
 
             <div className="Calculations">
                 <p><b>{unit1}</b> attacks <b>{unit2}</b> with <b>{unit1WepName}</b>!</p>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th><b>{unit1}</b></th>
+                        <th><b>{unit2}</b></th>
+                    </tr>
+
+                    <tr>
+                        <td><b>Mt</b></td>
+                        <td>{unit1Mt}</td>
+                        <td>{unit2Mt}</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Hit</b></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Crit</b></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Crit Mt</b></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
             </div>
 
             <div className="Participant2">

@@ -40,7 +40,8 @@
             "wt": 0
           }
         ]
-      },{
+      },
+      {
         "name": "Hubert",
         "weapon": "Mire B",
         "lv": 15,
@@ -78,7 +79,8 @@
             "wt": 0
           }
         ]
-      },{
+      },
+      {
         "name": "Linhardt",
         "weapon": "Nosferatu",
         "lv": 15,
@@ -160,7 +162,8 @@
             "wt": 0
           }
         ]
-      },{
+      },
+      {
         "name": "Dedue",
         "weapon": "Training Axe",
         "lv": 15,

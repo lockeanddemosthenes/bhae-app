@@ -34,6 +34,11 @@ export function getUnitWepName(unit) {
     return UnitsData[unitIndArr[0]].options[unitIndArr[1]].weapon;
 }
 
+export function getUnitStats(unit) {
+    let unitIndArr = getUnitInd(unit);
+    return UnitsData[unitIndArr[0]].options[unitIndArr[1]].stats;
+}
+
 export function getWepType(wep) {
     let wepIndArr = getWepInd(wep);
     return WepData[wepIndArr[0]].options[wepIndArr[1]].type;
@@ -69,15 +74,19 @@ export function getWepNote(wep) {
     return WepData[wepIndArr[0]].options[wepIndArr[1]].note;
 }
 
-export function getUnitCalcs(unit) {
-    let unitInd = getUnitInd(unit),
-        wepName = getUnitWepName(unit),
-        wepIndArr = getWepInd(wepName),
-        wepMag = getWepMag(wepName),
-        wepMt = getWepMt(wepName),
-        wepHit = getWepHit(wepName),
-        wepWt = getWepWt(wepName),
-        wepNote = getWepNote(wepName);
+export function getMt(unit1, unit2) {
+    let unit1Stats = getUnitStats(unit1),
+        unit2Stats = getUnitStats(unit2),
+        wep1Name = getUnitWepName(unit1),
+        wep1Mt = getWepMt(wep1Name);
+
+    if(getWepMag(wep1Name) == true) {
+        let mt = unit1Stats[0].mag + wep1Mt - unit2Stats[0].res;
+        return mt;
+    } else {
+        let mt = unit1Stats[0].str + wep1Mt - unit2Stats[0].def;
+        return mt;
+    }
 }
 //
 // export function getDmgFinalAttacker(unit1, unit2) {
