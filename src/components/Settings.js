@@ -8,7 +8,7 @@ import {
     getUnitWepName,
     getUnitCalcs,
     getWepType,
-    getUnitStats, getMt
+    getUnitStats, getFightMt, getFightHit, getFightCrit
 } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
@@ -175,8 +175,12 @@ function ResultDisplay() {
         abilityIcon = AbilitiesData[1].icon,
         abilityDesc = "<b>" + abilityName + "</b><br />" + AbilitiesData[1].desc;
 
-    let unit1Mt = getMt(unit1, unit2),
-        unit2Mt = getMt(unit2, unit1);
+    let unit1Mt = getFightMt(unit1, unit2),
+        unit2Mt = getFightMt(unit2, unit1),
+        unit1Hit = getFightHit(unit1, unit2),
+        unit2Hit = getFightHit(unit2, unit1),
+        unit1Crit = getFightCrit(unit1, unit2),
+        unit2Crit = getFightCrit(unit2, unit1);
 
     return (
         <div className="Results">
@@ -228,14 +232,14 @@ function ResultDisplay() {
 
                     <tr>
                         <td><b>Hit</b></td>
-                        <td></td>
-                        <td></td>
+                        <td>{unit1Hit}</td>
+                        <td>{unit2Hit}</td>
                     </tr>
 
                     <tr>
                         <td><b>Crit</b></td>
-                        <td></td>
-                        <td></td>
+                        <td>{unit1Crit}</td>
+                        <td>{unit2Crit}</td>
                     </tr>
 
                     <tr>

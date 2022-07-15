@@ -29,14 +29,30 @@ export function getWepInd(wep) {
     }
 }
 
-export function getUnitWepName(unit) {
-    let unitIndArr = getUnitInd(unit);
-    return UnitsData[unitIndArr[0]].options[unitIndArr[1]].weapon;
-}
-
+/**
+ * Get Stat Functions
+ */
 export function getUnitStats(unit) {
     let unitIndArr = getUnitInd(unit);
     return UnitsData[unitIndArr[0]].options[unitIndArr[1]].stats;
+}
+
+// export function getUnitCrit(unit) {
+//     let unitStats = getUnitStats(unit);
+//     return unitStats[0].lck +
+// }
+//
+// export function getUnitAvo(unit) {
+//     let unitStats = getUnitStats(unit);
+//     return unitStats[0].lck +
+// }
+
+/**
+ * Weapon Display Functions
+ */
+export function getUnitWepName(unit) {
+    let unitIndArr = getUnitInd(unit);
+    return UnitsData[unitIndArr[0]].options[unitIndArr[1]].weapon;
 }
 
 export function getWepType(wep) {
@@ -74,7 +90,10 @@ export function getWepNote(wep) {
     return WepData[wepIndArr[0]].options[wepIndArr[1]].note;
 }
 
-export function getMt(unit1, unit2) {
+/**
+ * Calculation Display Functions
+ */
+export function getFightMt(unit1, unit2) {
     let unit1Stats = getUnitStats(unit1),
         unit2Stats = getUnitStats(unit2),
         wep1Name = getUnitWepName(unit1),
@@ -88,10 +107,28 @@ export function getMt(unit1, unit2) {
         return mt;
     }
 }
-//
-// export function getDmgFinalAttacker(unit1, unit2) {
-//     let unit1IndArr = getUnitInd(unit1),
-//         unit2IndArr = getUnitInd(unit2),
-//         unit1Wep = getUnitWep(unit1),
-//         unit2Wep = getUnitWep(unit2);
-// }
+
+export function getFightHit(unit1, unit2) {
+    let unit1Stats = getUnitStats(unit1),
+        unit2Stats = getUnitStats(unit2),
+        wep1Name = getUnitWepName(unit1);
+
+    let hit = getWepHit(wep1Name) + unit1Stats[0].dex + (unit1Stats[0].luk / 2),
+        totalWt = getWepWt(wep1Name), //+ eqpWt
+        adjWt = totalWt - (unit1Stats[0].str / 5),
+        unit2AtkSpd = unit2Stats[0].spd - adjWt,
+        avo = unit2Stats[0].luk + unit2AtkSpd;
+
+    return hit - avo;
+}
+
+export function getFightCrit(unit1, unit2) {
+    let unit1Stats = getUnitStats(unit1),
+        unit2Stats = getUnitStats(unit2),
+        wep1Name = getUnitWepName(unit1);
+
+    let crit = getWepCrit(wep1Name) + unit1Stats[0].dex + (unit1Stats[0].luk / 2),
+        critAvo = unit2Stats[0].luk;
+
+    return crit - critAvo;
+}
