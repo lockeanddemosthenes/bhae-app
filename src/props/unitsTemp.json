@@ -8,6 +8,7 @@
         "lv": 15,
         "crestName": "Seiros",
         "crestDesc": "<b>Minor Crest of Seiros / Major Crest of Flames</b><br /><i>4 on d10 / 2 on d10</i><br />Raises Mt by 5 when using combat arts. / Restores HP equal to 30% of damage dealt.",
+        "eqp": "Steel Shield",
         "abilities": [
           {
             "ab1": "na",
@@ -32,7 +33,7 @@
             "str": 0,
             "mag": 0,
             "dex": 0,
-            "spd": 0,
+            "spd": 20,
             "luk": 0,
             "def": 3,
             "res": 0,
@@ -47,6 +48,7 @@
         "lv": 15,
         "crestName": "None",
         "crestDesc": "",
+        "eqp": "None",
         "abilities": [
           {
             "ab1": "na",
@@ -86,6 +88,7 @@
         "lv": 15,
         "crestName": "Cethleann",
         "crestDesc": "<b>Minor Crest of Cethleann</b><br /><i>3 on d10</i><br />Raises Mt by 5 when using recovery magic.",
+        "eqp": "None",
         "abilities": [
           {
             "ab1": "na",
@@ -130,6 +133,7 @@
         "lv": 15,
         "crestName": "Blaiddyd",
         "crestDesc": "<b>Minor Crest of Blaiddyd</b><br /><i>1 on d10</i><br />Doubles Mt and uses consumed when using combat arts.\n",
+        "eqp": "None",
         "abilities": [
           {
             "ab1": "na",
@@ -169,6 +173,7 @@
         "lv": 15,
         "crestName": "None",
         "crestDesc": "",
+        "eqp": "None",
         "abilities": [
           {
             "ab1": "na",
