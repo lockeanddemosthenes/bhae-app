@@ -3,12 +3,15 @@ import ReactTooltip from "react-tooltip";
 import { useState } from "react";
 import { useBetween } from "use-between";
 import {
-    getUnitInd,
-    getWepInd,
     getUnitWepName,
-    getUnitCalcs,
     getWepType,
-    getUnitStats, getFightMt, getFightHit, getFightCrit
+    getUnitStats,
+    getFightMt,
+    getFightHit,
+    getFightCrit,
+    getFightCritMt,
+    getCrest,
+    getCrestDesc, getWepTooltip
 } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
@@ -164,12 +167,19 @@ function Settings() {
 function ResultDisplay() {
     const { unit1, unit2 } = useBetween(useShareableState);
 
-    let p1Tip = "<b>" + unit1 + "</b>" + "<br/>Lv 13 Thief",
-        p2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider",
+    let unit1Tip = "<b>" + unit1 + "</b>" + "<br/>Lv 13 Thief",
+        unit2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider",
         unit1WepName = getUnitWepName(unit1),
         unit1WepType = getWepType(unit1WepName),
         unit2WepName = getUnitWepName(unit2),
-        unit2WepType = getWepType(unit2WepName);;
+        unit2WepType = getWepType(unit2WepName);
+
+    let unit1Crest = getCrest(unit1),
+        unit2Crest = getCrest(unit2),
+        unit1CrestDesc = getCrestDesc(unit1),
+        unit2CrestDesc = getCrestDesc(unit2),
+        unit1WepTip = getWepTooltip(unit1WepName),
+        unit2WepTip = getWepTooltip(unit2WepName);
 
     let abilityName = AbilitiesData[1].name,
         abilityIcon = AbilitiesData[1].icon,
@@ -180,19 +190,21 @@ function ResultDisplay() {
         unit1Hit = getFightHit(unit1, unit2),
         unit2Hit = getFightHit(unit2, unit1),
         unit1Crit = getFightCrit(unit1, unit2),
-        unit2Crit = getFightCrit(unit2, unit1);
+        unit2Crit = getFightCrit(unit2, unit1),
+        unit1CritMt = getFightCritMt(unit1, unit2),
+        unit2CritMt = getFightCritMt(unit2, unit1);
 
     return (
         <div className="Results">
             <div className="Participant1">
                 <div className="UnitIconContainer">
                     <div>
-                        <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit1 + '.png'} className="unit-portrait" alt={unit1} data-tip={p1Tip}/>
+                        <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit1 + '.png'} className="unit-portrait" alt={unit1} data-tip={unit1Tip}/>
                     </div>
                     <div className="cwe-icons">
-                        <img src={process.env.PUBLIC_URL + '/img/crest/aubin.png'} className="crest-icon" alt={abilityName} data-tip="Aubin (2): yeah"/>
+                        <img src={process.env.PUBLIC_URL + '/img/crest/' + unit1Crest + '.png'} className="crest-icon" alt={abilityName} data-tip={unit1CrestDesc}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={unit1WepName} data-tip={unit1WepName}/>
+                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={unit1WepName} data-tip={unit1WepTip}/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
@@ -244,8 +256,8 @@ function ResultDisplay() {
 
                     <tr>
                         <td><b>Crit Mt</b></td>
-                        <td></td>
-                        <td></td>
+                        <td>{unit1CritMt}</td>
+                        <td>{unit2CritMt}</td>
                     </tr>
                 </table>
             </div>
@@ -253,12 +265,12 @@ function ResultDisplay() {
             <div className="Participant2">
                 <div className="UnitIconContainer">
                     <div>
-                        <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit2 + '.png'} className="unit-portrait" alt={unit2} data-tip={p2Tip}/>
+                        <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit2 + '.png'} className="unit-portrait" alt={unit2} data-tip={unit2Tip}/>
                     </div>
                     <div className="cwe-icons">
-                        <img src={process.env.PUBLIC_URL + '/img/crest/none.png'} className="crest-icon" alt={abilityName} data-tip="CRESTLESS BUFFOON"/>
+                        <img src={process.env.PUBLIC_URL + '/img/crest/' + unit2Crest + '.png'} className="crest-icon" alt={abilityName} data-tip={unit2CrestDesc}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={unit2WepName} data-tip={unit2WepName}/>
+                        <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={unit2WepName} data-tip={unit2WepTip}/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
@@ -281,7 +293,7 @@ function ResultDisplay() {
                 {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
             </div>
 
-            <ReactTooltip className="toolTip" html={true} />
+            <ReactTooltip className="toolTip" html={true} data-multine={true}/>
         </div>
     );
 }
