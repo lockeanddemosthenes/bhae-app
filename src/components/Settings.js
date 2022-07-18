@@ -12,7 +12,7 @@ import {
     getFightCrit,
     getFightCritMt,
     getCrest,
-    getCrestDesc, getWepTooltip
+    getCrestDesc, getWepTooltip, getEqpType, getUnitEqpName
 } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
@@ -180,7 +180,9 @@ function ResultDisplay() {
         unit1CrestDesc = getCrestDesc(unit1),
         unit2CrestDesc = getCrestDesc(unit2),
         unit1WepTip = getWepTooltip(unit1WepName),
-        unit2WepTip = getWepTooltip(unit2WepName);
+        unit2WepTip = getWepTooltip(unit2WepName),
+        unit1EqpIcon = getEqpType(getUnitEqpName(unit1)),
+        unit2EqpIcon = getEqpType(getUnitEqpName(unit2));
 
     let abilityName = AbilitiesData[1].name,
         abilityIcon = AbilitiesData[1].icon,
@@ -207,7 +209,7 @@ function ResultDisplay() {
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={unit1WepName} data-tip={unit1WepTip}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit1EqpIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
                 </div>
                 <br />
@@ -273,7 +275,7 @@ function ResultDisplay() {
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={unit2WepName} data-tip={unit2WepTip}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + 'none' + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit2EqpIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
                     </div>
                 </div>
                 <br />

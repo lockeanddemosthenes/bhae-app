@@ -1,5 +1,6 @@
 const UnitsData = require("../props/unitsTemp.json"),
-    WepData = require("../props/weapons.json");
+    WepData = require("../props/weapons.json"),
+    EqpData = require("../props/equips.json");
 
 /**
  * @param unit
@@ -29,6 +30,15 @@ export function getWepInd(wep) {
     }
 }
 
+export function getUnitEqpName(unit) {
+    let unitIndArr = getUnitInd(unit),
+        eqpName = UnitsData[unitIndArr[0]].options[unitIndArr[1]].eqp;
+    return eqpName;
+}
+
+/**
+ * Get display functions
+ */
 export function getCrest(unit) {
     let unitIndArr = getUnitInd(unit);
     return UnitsData[unitIndArr[0]].options[unitIndArr[1]].crestName;
@@ -45,6 +55,13 @@ export function getWepTooltip(weapon) {
         " | <b>Wt </b>" + getWepWt(weapon);
     return tooltipStr;
 }
+
+export function getEqpType(eqpName) {
+    let eqp = EqpData.filter(function(data) {return data.name === eqpName});
+    return eqp[0].type;
+}
+
+
 
 /**
  * Get Stat Functions
