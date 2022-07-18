@@ -15,6 +15,7 @@ The BHaE Calculator is free for all to use and browse, no signup required. If yo
 ##Tools
 - [React](https://github.com/facebook/create-react-app)
 - [React-Select](https://github.com/jedwatson/react-select)
+- [React-Tooltip](https://github.com/wwayne/react-tooltip)
 - [use-between](https://github.com/betula/use-between)
 
 ## Available Scripts
