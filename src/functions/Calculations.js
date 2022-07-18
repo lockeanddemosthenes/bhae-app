@@ -40,8 +40,7 @@ export function getCrestDesc(unit) {
 }
 
 export function getWepTooltip(weapon) {
-    let tooltipStr = "";
-    tooltipStr = "<b>" + weapon + "</b><br /><b>Mt </b>" + getWepMt(weapon) +
+    let tooltipStr = "<b>" + weapon + "</b><br /><b>Mt </b>" + getWepMt(weapon) +
         " | <b>Hit </b>" + getWepHit(weapon) + " | <b>Crit </b>" + getWepCrit(weapon) +
         " | <b>Wt </b>" + getWepWt(weapon);
     return tooltipStr;
@@ -118,14 +117,21 @@ export function getFightMt(unit1, unit2) {
         wep2Name = getUnitWepName(unit2),
         wep1Mt = getWepMt(wep1Name);
 
-    let mt = 0,
-        doubled = "";
-
+    let mt = 0;
     if(getWepMag(wep1Name) === true) {
         mt = unit1Stats[0].mag + wep1Mt - unit2Stats[0].res;
     } else {
         mt = unit1Stats[0].str + wep1Mt - unit2Stats[0].def;
     }
+
+    return mt;
+}
+
+export function getFightMtStr(unit1, unit2) {
+    let unit1Stats = getUnitStats(unit1),
+        unit2Stats = getUnitStats(unit2),
+        wep1Name = getUnitWepName(unit1),
+        wep2Name = getUnitWepName(unit2);
 
     let totalWt1 = getWepWt(wep1Name), //+ eqpWt
         totalWt2 = getWepWt(wep2Name), //+ eqpWt
@@ -134,13 +140,16 @@ export function getFightMt(unit1, unit2) {
         unit1AtkSpd = unit1Stats[0].spd - adjWt1,
         unit2AtkSpd = unit2Stats[0].spd - adjWt2;
 
+    let doubled = "";
+
     if((unit1AtkSpd - unit2AtkSpd) > 4) {
         doubled = " x2";
     }
 
-    let atkStr = mt.toString() + doubled;
+    let atkStr = getFightMt(unit1, unit2).toString() + doubled;
 
     return atkStr;
+
 }
 
 export function getFightHit(unit1, unit2) {

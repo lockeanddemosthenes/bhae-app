@@ -7,6 +7,7 @@ import {
     getWepType,
     getUnitStats,
     getFightMt,
+    getFightMtStr,
     getFightHit,
     getFightCrit,
     getFightCritMt,
@@ -185,8 +186,8 @@ function ResultDisplay() {
         abilityIcon = AbilitiesData[1].icon,
         abilityDesc = "<b>" + abilityName + "</b><br />" + AbilitiesData[1].desc;
 
-    let unit1Mt = getFightMt(unit1, unit2),
-        unit2Mt = getFightMt(unit2, unit1),
+    let unit1Mt = getFightMtStr(unit1, unit2),
+        unit2Mt = getFightMtStr(unit2, unit1),
         unit1Hit = getFightHit(unit1, unit2),
         unit2Hit = getFightHit(unit2, unit1),
         unit1Crit = getFightCrit(unit1, unit2),
