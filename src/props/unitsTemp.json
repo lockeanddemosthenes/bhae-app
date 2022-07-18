@@ -7,7 +7,7 @@
         "weapon": "Training Axe",
         "lv": 15,
         "crestName": "Seiros",
-        "crestDesc": "Minor Crest of Seiros / Major Crest of Flames\n4 on d10 / 2 on d10\nRaises Mt by 5 when using combat arts. / Restores HP equal to 30% of damage dealt.\n",
+        "crestDesc": "<b>Minor Crest of Seiros / Major Crest of Flames</b><br /><i>4 on d10 / 2 on d10</i><br />Raises Mt by 5 when using combat arts. / Restores HP equal to 30% of damage dealt.",
         "abilities": [
           {
             "ab1": "na",
@@ -45,7 +45,7 @@
         "name": "Hubert",
         "weapon": "Mire B",
         "lv": 15,
-        "crestName": "na",
+        "crestName": "None",
         "crestDesc": "",
         "abilities": [
           {
@@ -85,7 +85,7 @@
         "weapon": "Nosferatu",
         "lv": 15,
         "crestName": "Cethleann",
-        "crestDesc": "Minor Crest of Cethleann\nI forgor",
+        "crestDesc": "<b>Minor Crest of Cethleann</b><br /><i>3 on d10</i><br />Raises Mt by 5 when using recovery magic.",
         "abilities": [
           {
             "ab1": "na",
@@ -129,7 +129,7 @@
         "weapon": "Training Lance",
         "lv": 15,
         "crestName": "Blaiddyd",
-        "crestDesc": "Minor Crest of Blaiddyd\n1 on d10\nDoubles Mt and uses consumed when using combat arts.\n",
+        "crestDesc": "<b>Minor Crest of Blaiddyd</b><br /><i>1 on d10</i><br />Doubles Mt and uses consumed when using combat arts.\n",
         "abilities": [
           {
             "ab1": "na",
@@ -167,7 +167,7 @@
         "name": "Dedue",
         "weapon": "Training Axe",
         "lv": 15,
-        "crestName": "na",
+        "crestName": "None",
         "crestDesc": "",
         "abilities": [
           {
