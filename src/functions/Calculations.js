@@ -1,6 +1,8 @@
 const UnitsData = require("../props/unitsTemp.json"),
     WepData = require("../props/weapons.json"),
-    EqpData = require("../props/equips.json");
+    EqpData = require("../props/equips.json"),
+    AbilitiesData = require("../props/abilities.json"),
+    CombatArtsData = require("../props/combat_arts.json");
 
 /**
  * @param unit
@@ -30,6 +32,16 @@ export function getWepInd(wep) {
     }
 }
 
+export function getCombatArtInd(artName) {
+    for(let typeIndex=0; typeIndex < CombatArtsData.length; typeIndex++) {
+        for(let artIndex=0; artIndex < CombatArtsData[typeIndex].options.length; artIndex++) {
+            if(CombatArtsData[typeIndex].options[artIndex].name === artName) {
+                return [typeIndex, artIndex];
+            }
+        }
+    }
+}
+
 export function getUnitEqpName(unit) {
     let unitIndArr = getUnitInd(unit),
         eqpName = UnitsData[unitIndArr[0]].options[unitIndArr[1]].eqp;
@@ -39,7 +51,7 @@ export function getUnitEqpName(unit) {
 /**
  * Get display functions
  */
-export function getCrest(unit) {
+export function getCrestName(unit) {
     let unitIndArr = getUnitInd(unit);
     return UnitsData[unitIndArr[0]].options[unitIndArr[1]].crestName;
 }
@@ -61,8 +73,6 @@ export function getEqpType(eqpName) {
     return eqp[0].type;
 }
 
-
-
 /**
  * Get Stat Functions
  */
@@ -80,6 +90,33 @@ export function getUnitStats(unit) {
 //     let unitStats = getUnitStats(unit);
 //     return unitStats[0].lck +
 // }
+
+/**
+ * Get Ability Functions
+ */
+
+export function getAbilityArray(unit) {
+    let unitIndArr = getUnitInd(unit);
+    return UnitsData[unitIndArr[0]].options[unitIndArr[1]].abilities;
+}
+
+export function getAbilityIcon(unitAbilities, num) {
+    return unitAbilities[num];
+}
+
+export function getAbilityName(unitAbilities, num) {
+    let abilityIcon = getAbilityIcon(unitAbilities, num),
+        ability = AbilitiesData.filter(function(data) {return data.icon === abilityIcon});
+    return ability[0].name;
+}
+
+export function getAbilityDesc(unitAbilities, num) {
+    let abilityIcon = getAbilityIcon(unitAbilities, num),
+        ability = AbilitiesData.filter(function(data) {return data.icon === abilityIcon}),
+        abilityDescText = ability[0].desc,
+        fullString = "<b>" + getAbilityName(unitAbilities, num) + "</b><br />" + abilityDescText;
+    return fullString;
+}
 
 /**
  * Weapon Display Functions
@@ -125,26 +162,60 @@ export function getWepNote(wep) {
 }
 
 /**
+ * Get Combat Art Functions
+ */
+export function getCombatArtMag(combatArt) {
+    let combatArtIndArr = getCombatArtInd(combatArt);
+    return CombatArtsData[combatArtIndArr[0]].options[combatArtIndArr[1]].magic;
+}
+
+export function getCombatArtMt(combatArt) {
+    let combatArtIndArr = getCombatArtInd(combatArt);
+    return CombatArtsData[combatArtIndArr[0]].options[combatArtIndArr[1]].mt;
+}
+
+export function getCombatArtHit(combatArt) {
+    let combatArtIndArr = getCombatArtInd(combatArt);
+    return CombatArtsData[combatArtIndArr[0]].options[combatArtIndArr[1]].hit;
+}
+
+export function getCombatArtCrit(combatArt) {
+    let combatArtIndArr = getCombatArtInd(combatArt);
+    return CombatArtsData[combatArtIndArr[0]].options[combatArtIndArr[1]].crit;
+}
+
+export function getCombatArtAvo(combatArt) {
+    let combatArtIndArr = getCombatArtInd(combatArt);
+    return CombatArtsData[combatArtIndArr[0]].options[combatArtIndArr[1]].avo;
+}
+
+export function getCombatArtNote(combatArt) {
+    let combatArtIndArr = getCombatArtInd(combatArt);
+    return CombatArtsData[combatArtIndArr[0]].options[combatArtIndArr[1]].note;
+}
+
+/**
  * Calculation Display Functions
  */
-export function getFightMt(unit1, unit2) {
+export function getFightMt(unit1, unit2, combatArt) {
     let unit1Stats = getUnitStats(unit1),
         unit2Stats = getUnitStats(unit2),
         wep1Name = getUnitWepName(unit1),
-        wep2Name = getUnitWepName(unit2),
         wep1Mt = getWepMt(wep1Name);
 
     let mt = 0;
-    if(getWepMag(wep1Name) === true) {
+    if(getWepMag(wep1Name) === true || getCombatArtMag(combatArt) === true) {
         mt = unit1Stats[0].mag + wep1Mt - unit2Stats[0].res;
     } else {
         mt = unit1Stats[0].str + wep1Mt - unit2Stats[0].def;
     }
 
+    mt += getCombatArtMt(combatArt);
+
     return mt;
 }
 
-export function getFightMtStr(unit1, unit2) {
+export function getFightMtStr(unit1, unit2, combatArt) {
     let unit1Stats = getUnitStats(unit1),
         unit2Stats = getUnitStats(unit2),
         wep1Name = getUnitWepName(unit1),
@@ -163,13 +234,13 @@ export function getFightMtStr(unit1, unit2) {
         doubled = " x2";
     }
 
-    let atkStr = getFightMt(unit1, unit2).toString() + doubled;
+    let atkStr = getFightMt(unit1, unit2, combatArt).toString() + doubled;
 
     return atkStr;
 
 }
 
-export function getFightHit(unit1, unit2) {
+export function getFightHit(unit1, unit2, combatArt) {
     let unit1Stats = getUnitStats(unit1),
         unit2Stats = getUnitStats(unit2),
         wep1Name = getUnitWepName(unit1);
@@ -180,10 +251,12 @@ export function getFightHit(unit1, unit2) {
         unit2AtkSpd = unit2Stats[0].spd - adjWt,
         avo = unit2Stats[0].luk + unit2AtkSpd;
 
+    hit += getCombatArtHit(combatArt);
+
     return hit - avo;
 }
 
-export function getFightCrit(unit1, unit2) {
+export function getFightCrit(unit1, unit2, combatArt) {
     let unit1Stats = getUnitStats(unit1),
         unit2Stats = getUnitStats(unit2),
         wep1Name = getUnitWepName(unit1);
@@ -191,11 +264,13 @@ export function getFightCrit(unit1, unit2) {
     let crit = getWepCrit(wep1Name) + unit1Stats[0].dex + (unit1Stats[0].luk / 2),
         critAvo = unit2Stats[0].luk;
 
+    crit += getCombatArtCrit(combatArt);
+
     return crit - critAvo;
 }
 
-export function getFightCritMt(unit1, unit2) {
-    let mt = getFightMt(unit1, unit2);
+export function getFightCritMt(unit1, unit2, combatArt) {
+    let mt = getFightMt(unit1, unit2, combatArt);
 
     return mt*3;
 }

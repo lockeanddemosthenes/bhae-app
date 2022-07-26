@@ -3,16 +3,10 @@ import ReactTooltip from "react-tooltip";
 import { useState } from "react";
 import { useBetween } from "use-between";
 import {
-    getUnitWepName,
-    getWepType,
-    getUnitStats,
-    getFightMt,
-    getFightMtStr,
-    getFightHit,
-    getFightCrit,
-    getFightCritMt,
-    getCrest,
-    getCrestDesc, getWepTooltip, getEqpType, getUnitEqpName
+    getUnitWepName, getWepType, getUnitStats, getFightMt,
+    getFightMtStr, getFightHit, getFightCrit, getFightCritMt,
+    getCrestName, getCrestDesc, getWepTooltip, getEqpType,
+    getUnitEqpName, getAbilityArray, getAbilityDesc, getAbilityIcon, getCombatArtInd, getCombatArtMag
 } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
@@ -22,16 +16,19 @@ const UnitsData = require('../props/unitsTemp.json');
 function useShareableState() {
     const [unit1, setUnit1] = useState("Edelgard");
     const [unit2, setUnit2] = useState("Edelgard");
+    const [combatArt, setCombatArt] = useState("None");
     return {
         unit1,
         setUnit1,
         unit2,
-        setUnit2
+        setUnit2,
+        combatArt,
+        setCombatArt
     }
 }
 
 function Settings() {
-    const { unit1, setUnit1, unit2, setUnit2 } = useBetween(useShareableState);
+    const { unit1, setUnit1, unit2, setUnit2, combatArt, setCombatArt } = useBetween(useShareableState);
 
     function handleUnit1(e) {
         setUnit1(e.name);
@@ -39,6 +36,10 @@ function Settings() {
 
     function handleUnit2(e) {
         setUnit2(e.name);
+    }
+
+    function handleCombatArt(e) {
+        setCombatArt(e.name);
     }
 
     return (
@@ -124,9 +125,10 @@ function Settings() {
                 <br />
                 <div style={{width: '242px', margin: '0 2.5rem 2rem 2.5rem'}}>
                     <Select //menuIsOpen = {true}
-                        isClearable
                         options={CombatArtsData}
+                        defaultValue={CombatArtsData[0].options[0]}
                         getOptionLabel={(option) => `${option.name}`}
+                        onChange={handleCombatArt}
                         theme={(theme) => ({
                             ...theme,
                             baseUnit: 50,
@@ -159,14 +161,14 @@ function Settings() {
 
             <button id="changeWpnBtn">Change Weapon</button>
             <br/>
-            <br />
+            <br/>
             <ResultDisplay />
         </div>
     );
 }
 
 function ResultDisplay() {
-    const { unit1, unit2 } = useBetween(useShareableState);
+    const { unit1, unit2, combatArt } = useBetween(useShareableState);
 
     let unit1Tip = "<b>" + unit1 + "</b>" + "<br/>Lv 13 Thief",
         unit2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider",
@@ -175,8 +177,8 @@ function ResultDisplay() {
         unit2WepName = getUnitWepName(unit2),
         unit2WepType = getWepType(unit2WepName);
 
-    let unit1Crest = getCrest(unit1),
-        unit2Crest = getCrest(unit2),
+    let unit1Crest = getCrestName(unit1),
+        unit2Crest = getCrestName(unit2),
         unit1CrestDesc = getCrestDesc(unit1),
         unit2CrestDesc = getCrestDesc(unit2),
         unit1WepTip = getWepTooltip(unit1WepName),
@@ -184,18 +186,17 @@ function ResultDisplay() {
         unit1EqpIcon = getEqpType(getUnitEqpName(unit1)),
         unit2EqpIcon = getEqpType(getUnitEqpName(unit2));
 
-    let abilityName = AbilitiesData[1].name,
-        abilityIcon = AbilitiesData[1].icon,
-        abilityDesc = "<b>" + abilityName + "</b><br />" + AbilitiesData[1].desc;
+    let abilityArrayUnit1 = getAbilityArray(unit1),
+        abilityArrayUnit2 = getAbilityArray(unit2);
 
-    let unit1Mt = getFightMtStr(unit1, unit2),
-        unit2Mt = getFightMtStr(unit2, unit1),
-        unit1Hit = getFightHit(unit1, unit2),
-        unit2Hit = getFightHit(unit2, unit1),
-        unit1Crit = getFightCrit(unit1, unit2),
-        unit2Crit = getFightCrit(unit2, unit1),
-        unit1CritMt = getFightCritMt(unit1, unit2),
-        unit2CritMt = getFightCritMt(unit2, unit1);
+    let unit1Mt = getFightMtStr(unit1, unit2, combatArt),
+        unit2Mt = getFightMtStr(unit2, unit1, "None"),
+        unit1Hit = getFightHit(unit1, unit2, combatArt),
+        unit2Hit = getFightHit(unit2, unit1, "None"),
+        unit1Crit = getFightCrit(unit1, unit2, combatArt),
+        unit2Crit = getFightCrit(unit2, unit1, "None"),
+        unit1CritMt = getFightCritMt(unit1, unit2, combatArt),
+        unit2CritMt = getFightCritMt(unit2, unit1, "None");
 
     return (
         <div className="Results">
@@ -205,29 +206,29 @@ function ResultDisplay() {
                         <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit1 + '.png'} className="unit-portrait" alt={unit1} data-tip={unit1Tip}/>
                     </div>
                     <div className="cwe-icons">
-                        <img src={process.env.PUBLIC_URL + '/img/crest/' + unit1Crest + '.png'} className="crest-icon" alt={abilityName} data-tip={unit1CrestDesc}/>
+                        <img src={process.env.PUBLIC_URL + '/img/crest/' + unit1Crest + '.png'} className="crest-icon" alt={unit1Crest} data-tip={unit1CrestDesc}/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={unit1WepName} data-tip={unit1WepTip}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit1EqpIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit1EqpIcon + '.png'} className="eqp-icon" alt={unit1EqpIcon} data-tip="equipment"/>
                     </div>
                 </div>
                 <br />
 
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <br />*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <br />*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-            {/*    <img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 0) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 0)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 1) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 1)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 2) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 2)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 3) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 3)}/>
+                <br />
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 4) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 4)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 5) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 5)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 6) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 6)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 7) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 7)}/>
+                <br />
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 8) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 8)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 9) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 9)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 10)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 11)}/>
             </div>
 
             <div className="Calculations">
@@ -271,29 +272,29 @@ function ResultDisplay() {
                         <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit2 + '.png'} className="unit-portrait" alt={unit2} data-tip={unit2Tip}/>
                     </div>
                     <div className="cwe-icons">
-                        <img src={process.env.PUBLIC_URL + '/img/crest/' + unit2Crest + '.png'} className="crest-icon" alt={abilityName} data-tip={unit2CrestDesc}/>
+                        <img src={process.env.PUBLIC_URL + '/img/crest/' + unit2Crest + '.png'} className="crest-icon" alt={unit2Crest} data-tip={unit2CrestDesc}/>
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={unit2WepName} data-tip={unit2WepTip}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit2EqpIcon + '.png'} className="eqp-icon" alt={abilityName} data-tip="equipment"/>
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit2EqpIcon + '.png'} className="eqp-icon" alt={unit2EqpIcon} data-tip="equipment"/>
                     </div>
                 </div>
                 <br />
 
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<br />*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<br />*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
-                {/*<img src={process.env.PUBLIC_URL + '/img/abilities/' + abilityIcon + '.png'} className="ability-icon" alt={abilityName} data-tip={abilityDesc}/>*/}
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 0) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 0)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 1) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 1)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 2) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 2)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 3) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 3)}/>
+                <br />
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 4) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 4)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 5) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 5)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 6) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 6)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 7) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 7)}/>
+                <br />
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 8) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 8)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 9) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 9)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 10)}/>
+                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 11)}/>
             </div>
 
             <ReactTooltip className="toolTip" html={true} data-multine={true}/>
