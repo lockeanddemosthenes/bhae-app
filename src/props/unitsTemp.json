@@ -10,22 +10,20 @@
         "crestDesc": "<b>Minor Crest of Seiros / Major Crest of Flames</b><br /><i>4 on d10 / 2 on d10</i><br />Raises Mt by 5 when using combat arts. / Restores HP equal to 30% of damage dealt.",
         "eqp": "Steel Shield",
         "abilities": [
-          {
-            "ab1": "na",
-            "ab2": "na",
-            "ab3": "na",
-            "ab4": "na",
-            "ab5": "na",
-            "ab6": "na",
-            "ab7": "na",
-            "ab8": "na",
-            "ab9": "na",
-            "ab10": "na",
-            "ab11": "na",
-            "ab12": "na",
-            "ab13": "na",
-            "ab14": "na"
-          }
+          "imperial_bloodline",
+          "armored_blow",
+          "weight_3",
+          "lancebreaker",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
         ],
         "stats": [
           {
@@ -50,22 +48,20 @@
         "crestDesc": "",
         "eqp": "None",
         "abilities": [
-          {
-            "ab1": "na",
-            "ab2": "na",
-            "ab3": "na",
-            "ab4": "na",
-            "ab5": "na",
-            "ab6": "na",
-            "ab7": "na",
-            "ab8": "na",
-            "ab9": "na",
-            "ab10": "na",
-            "ab11": "na",
-            "ab12": "na",
-            "ab13": "na",
-            "ab14": "na"
-          }
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
         ],
         "stats": [
           {
@@ -90,22 +86,20 @@
         "crestDesc": "<b>Minor Crest of Cethleann</b><br /><i>3 on d10</i><br />Raises Mt by 5 when using recovery magic.",
         "eqp": "None",
         "abilities": [
-          {
-            "ab1": "na",
-            "ab2": "na",
-            "ab3": "na",
-            "ab4": "na",
-            "ab5": "na",
-            "ab6": "na",
-            "ab7": "na",
-            "ab8": "na",
-            "ab9": "na",
-            "ab10": "na",
-            "ab11": "na",
-            "ab12": "na",
-            "ab13": "na",
-            "ab14": "na"
-          }
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
         ],
         "stats": [
           {
@@ -135,22 +129,20 @@
         "crestDesc": "<b>Minor Crest of Blaiddyd</b><br /><i>1 on d10</i><br />Doubles Mt and uses consumed when using combat arts.\n",
         "eqp": "None",
         "abilities": [
-          {
-            "ab1": "na",
-            "ab2": "na",
-            "ab3": "na",
-            "ab4": "na",
-            "ab5": "na",
-            "ab6": "na",
-            "ab7": "na",
-            "ab8": "na",
-            "ab9": "na",
-            "ab10": "na",
-            "ab11": "na",
-            "ab12": "na",
-            "ab13": "na",
-            "ab14": "na"
-          }
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
         ],
         "stats": [
           {
@@ -175,22 +167,20 @@
         "crestDesc": "",
         "eqp": "None",
         "abilities": [
-          {
-            "ab1": "na",
-            "ab2": "na",
-            "ab3": "na",
-            "ab4": "na",
-            "ab5": "na",
-            "ab6": "na",
-            "ab7": "na",
-            "ab8": "na",
-            "ab9": "na",
-            "ab10": "na",
-            "ab11": "na",
-            "ab12": "na",
-            "ab13": "na",
-            "ab14": "na"
-          }
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
         ],
         "stats": [
           {

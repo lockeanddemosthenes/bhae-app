@@ -1,5 +1,19 @@
 [
   {
+    "label": "none",
+    "options": [
+      {
+        "name": "None",
+        "magic": false,
+        "mt": 0,
+        "hit": 0,
+        "crit": 0,
+        "avo": 0,
+        "note": ""
+      }
+    ]
+  },
+  {
     "label": "sword",
     "options": [
       {
