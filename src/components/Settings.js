@@ -3,10 +3,26 @@ import ReactTooltip from "react-tooltip";
 import { useState } from "react";
 import { useBetween } from "use-between";
 import {
-    getUnitWepName, getWepType, getUnitStats, getFightMt,
-    getFightMtStr, getFightHit, getFightCrit, getFightCritMt,
-    getCrestName, getCrestDesc, getWepTooltip, getEqpType,
-    getUnitEqpName, getAbilityArray, getAbilityDesc, getAbilityIcon, getCombatArtInd, getCombatArtMag, getLvClass
+    getUnitWepName,
+    getWepType,
+    getUnitStats,
+    getFightMt,
+    getFightMtStr,
+    getFightHit,
+    getFightCrit,
+    getFightCritMt,
+    getCrestName,
+    getCrestDesc,
+    getWepTooltip,
+    getEqpType,
+    getUnitEqpName,
+    getAbilityArray,
+    getAbilityDesc,
+    getAbilityIcon,
+    getCombatArtInd,
+    getCombatArtMag,
+    getLvClass,
+    getEqpDesc
 } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
@@ -171,20 +187,24 @@ function ResultDisplay() {
     const { unit1, unit2, combatArt } = useBetween(useShareableState);
 
     let unit1WepName = getUnitWepName(unit1),
-        unit1WepType = getWepType(unit1WepName),
         unit2WepName = getUnitWepName(unit2),
-        unit2WepType = getWepType(unit2WepName);
-
-    let unit1LvClass = getLvClass(unit1),
+        unit1EqpName = getUnitEqpName(unit1),
+        unit2EqpName = getUnitEqpName(unit2),
+        unit1LvClass = getLvClass(unit1),
         unit2LvClass = getLvClass(unit2),
         unit1Crest = getCrestName(unit1),
         unit2Crest = getCrestName(unit2),
         unit1CrestDesc = getCrestDesc(unit1),
-        unit2CrestDesc = getCrestDesc(unit2),
-        unit1WepTip = getWepTooltip(unit1WepName),
+        unit2CrestDesc = getCrestDesc(unit2);
+
+    let unit1WepTip = getWepTooltip(unit1WepName),
         unit2WepTip = getWepTooltip(unit2WepName),
-        unit1EqpIcon = getEqpType(getUnitEqpName(unit1)),
-        unit2EqpIcon = getEqpType(getUnitEqpName(unit2));
+        unit1WepType = getWepType(unit1WepName),
+        unit2WepType = getWepType(unit2WepName),
+        unit1EqpIcon = getEqpType(unit1EqpName),
+        unit2EqpIcon = getEqpType(unit2EqpName),
+        unit1EqpTip = "<b>" + unit1EqpName + "</b><br />" + getEqpDesc(unit1EqpName),
+        unit2EqpTip = "<b>" + unit2EqpName + "</b><br />" + getEqpDesc(unit2EqpName);
 
     let abilityArrayUnit1 = getAbilityArray(unit1),
         abilityArrayUnit2 = getAbilityArray(unit2);
@@ -213,25 +233,27 @@ function ResultDisplay() {
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/wep/' + unit1WepType + '.png'} className="wep-icon" alt={unit1WepName} data-tip={unit1WepTip}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit1EqpIcon + '.png'} className="eqp-icon" alt={unit1EqpIcon} data-tip="equipment"/>
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit1EqpIcon + '.png'} className="eqp-icon" alt={unit1EqpName} data-tip={unit1EqpTip}/>
                     </div>
                 </div>
                 <br />
 
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 0) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 0)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 1) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 1)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 2) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 2)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 3) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 3)}/>
-                <br />
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 4) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 4)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 5) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 5)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 6) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 6)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 7) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 7)}/>
-                <br />
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 8) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 8)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 9) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 9)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 10)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 11)}/>
+                <div className="UnitAbilityContainer">
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 0) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 0)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 1) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 1)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 2) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 2)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 3) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 3)}/>
+                    <br />
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 4) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 4)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 5) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 5)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 6) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 6)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 7) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 7)}/>
+                    <br />
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 8) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 8)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 9) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 9)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 10)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 11)}/>
+                </div>
             </div>
 
             <div className="Calculations">
@@ -279,25 +301,27 @@ function ResultDisplay() {
                         <br />
                         <img src={process.env.PUBLIC_URL + '/img/wep/' + unit2WepType + '.png'} className="wep-icon" alt={unit2WepName} data-tip={unit2WepTip}/>
                         <br />
-                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit2EqpIcon + '.png'} className="eqp-icon" alt={unit2EqpIcon} data-tip="equipment"/>
+                        <img src={process.env.PUBLIC_URL + '/img/eqp/' + unit2EqpIcon + '.png'} className="eqp-icon" alt={unit2EqpName} data-tip={unit2EqpTip}/>
                     </div>
                 </div>
                 <br />
 
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 0) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 0)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 1) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 1)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 2) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 2)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 3) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 3)}/>
-                <br />
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 4) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 4)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 5) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 5)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 6) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 6)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 7) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 7)}/>
-                <br />
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 8) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 8)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 9) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 9)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 10)}/>
-                <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 11)}/>
+                <div className="UnitAbilityContainer">
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 0) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 0)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 1) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 1)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 2) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 2)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 3) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 3)}/>
+                    <br />
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 4) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 4)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 5) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 5)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 6) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 6)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 7) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 7)}/>
+                    <br />
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 8) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 8)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 9) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 9)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 10)}/>
+                    <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 11)}/>
+                </div>
             </div>
 
             <ReactTooltip className="toolTip" html={true} data-multine={true}/>

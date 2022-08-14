@@ -73,6 +73,11 @@ export function getEqpType(eqpName) {
     return eqp[0].type;
 }
 
+export function getEqpDesc(eqpName) {
+    let eqp = EqpData.filter(function(data) {return data.name === eqpName});
+    return eqp[0].note;
+}
+
 export function getLvClass(unit) {
     let unitIndArr = getUnitInd(unit),
         lv = UnitsData[unitIndArr[0]].options[unitIndArr[1]].lv,
