@@ -296,6 +296,94 @@ input[type="checkbox"]:focus {
     padding-left: 2em;
 }
 
+.UnitStatContainer {
+    font-size: 0.75em;
+    padding-left: 1em;
+    padding-right: 3em;
+    margin-left: 2em;
+    margin-right: 3em;
+    opacity: 1;
+}
+
+#unit1StatContainer {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#unit2StatContainer {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggleLabel{
+    font-size: 0.75em;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 1.8em;
+    height: 0.8em;
+    margin: 10px 5px 10px 35px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #777;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 0.5em;
+    width: 0.5em;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #64C89A;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(0.9em);
+    -ms-transform: translateX(0.9em);
+    transform: translateX(0.9em);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 /**
 *
 * REACT-SELECT
@@ -386,13 +474,19 @@ pre > code {
 /* Tables */
 table {
     text-align: justify;
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
+}
+
+#CalcTable {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td, th {
     padding: 0.5em;
     border-bottom: 1px solid #f1f1f1;
+    font-family: 'EB-Garamond';
 }
 
 .pre {

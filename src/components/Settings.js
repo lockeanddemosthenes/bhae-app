@@ -174,7 +174,6 @@ function Settings() {
                 /></div>
                 <br />
             </form>
-
             <button id="changeWpnBtn">Change Weapon</button>
             <br/>
             <br/>
@@ -186,6 +185,24 @@ function Settings() {
 function ResultDisplay() {
     const { unit1, unit2, combatArt } = useBetween(useShareableState);
 
+    function toggleStats1() {
+        let unit = document.getElementById("unit1StatContainer");
+        if(unit.style.opacity == 0) {
+            unit.style.opacity = "1";
+        } else {
+            unit.style.opacity = "0";
+        }
+    }
+
+    function toggleStats2() {
+        let unit = document.getElementById("unit2StatContainer");
+        if(unit.style.opacity == 0) {
+            unit.style.opacity = "1";
+        } else {
+            unit.style.opacity = "0";
+        }
+    }
+
     let unit1WepName = getUnitWepName(unit1),
         unit2WepName = getUnitWepName(unit2),
         unit1EqpName = getUnitEqpName(unit1),
@@ -195,7 +212,9 @@ function ResultDisplay() {
         unit1Crest = getCrestName(unit1),
         unit2Crest = getCrestName(unit2),
         unit1CrestDesc = getCrestDesc(unit1),
-        unit2CrestDesc = getCrestDesc(unit2);
+        unit2CrestDesc = getCrestDesc(unit2),
+        unit1Stats = getUnitStats(unit1),
+        unit2Stats = getUnitStats(unit2);
 
     let unit1WepTip = getWepTooltip(unit1WepName),
         unit2WepTip = getWepTooltip(unit2WepName),
@@ -223,7 +242,7 @@ function ResultDisplay() {
 
     return (
         <div className="Results">
-            <div className="Participant1">
+            <div className="Participant" id="participant1">
                 <div className="UnitIconContainer">
                     <div>
                         <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit1 + '.png'} className="unit-portrait" alt={unit1} data-tip={unit1Tip}/>
@@ -254,11 +273,66 @@ function ResultDisplay() {
                     <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 10)}/>
                     <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit1, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit1, 11)}/>
                 </div>
+
+                <div className="UnitStatBigContainer">
+                <label class="switch">
+                    <input type="checkbox" onClick={toggleStats1}/>
+                    <span class="slider round" />
+                </label><span className="toggleLabel">Toggle Stats</span>
+                <div className="UnitStatContainer" id="unit1StatContainer">
+                    <table>
+                        <tr>
+                            <td><b>HP</b></td>
+                            <td>{unit1Stats[0].hp}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Str</b></td>
+                            <td>{unit1Stats[0].str}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Mag</b></td>
+                            <td>{unit1Stats[0].mag}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Dex</b></td>
+                            <td>{unit1Stats[0].dex}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Spd</b></td>
+                            <td>{unit1Stats[0].spd}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Luk</b></td>
+                            <td>{unit1Stats[0].luk}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Def</b></td>
+                            <td>{unit1Stats[0].def}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Res</b></td>
+                            <td>{unit1Stats[0].res}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Cha</b></td>
+                            <td>{unit1Stats[0].cha}</td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
             </div>
 
             <div className="Calculations">
                 <p><b>{unit1}</b> attacks <b>{unit2}</b> with <b>{unit1WepName}</b>!</p>
-                <table>
+                <table id="CalcTable">
                     <tr>
                         <th></th>
                         <th><b>{unit1}</b></th>
@@ -291,7 +365,7 @@ function ResultDisplay() {
                 </table>
             </div>
 
-            <div className="Participant2">
+            <div className="Participant" id="participant2">
                 <div className="UnitIconContainer">
                     <div>
                         <img src={process.env.PUBLIC_URL + '/img/portrait/' + unit2 + '.png'} className="unit-portrait" alt={unit2} data-tip={unit2Tip}/>
@@ -321,6 +395,61 @@ function ResultDisplay() {
                     <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 9) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 9)}/>
                     <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 10) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 10)}/>
                     <img src={process.env.PUBLIC_URL + '/img/abilities/' + getAbilityIcon(abilityArrayUnit2, 11) + '.png'} className="ability-icon" alt="ability-icon" data-tip={getAbilityDesc(abilityArrayUnit2, 11)}/>
+                </div>
+
+                <div className="UnitStatBigContainer">
+                    <label className="switch">
+                        <input type="checkbox" onClick={toggleStats2}/>
+                        <span className="slider round"/>
+                    </label><span className="toggleLabel">Toggle Stats</span>
+                <div className="UnitStatContainer" id="unit2StatContainer">
+                    <table>
+                        <tr>
+                            <td><b>HP</b></td>
+                            <td>{unit2Stats[0].hp}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Str</b></td>
+                            <td>{unit2Stats[0].str}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Mag</b></td>
+                            <td>{unit2Stats[0].mag}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Dex</b></td>
+                            <td>{unit2Stats[0].dex}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Spd</b></td>
+                            <td>{unit2Stats[0].spd}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Luk</b></td>
+                            <td>{unit2Stats[0].luk}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Def</b></td>
+                            <td>{unit2Stats[0].def}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Res</b></td>
+                            <td>{unit2Stats[0].res}</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Cha</b></td>
+                            <td>{unit2Stats[0].cha}</td>
+                        </tr>
+                    </table>
+                </div>
                 </div>
             </div>
 
