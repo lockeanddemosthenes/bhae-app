@@ -6,7 +6,7 @@ import {
     getUnitWepName, getWepType, getUnitStats, getFightMt,
     getFightMtStr, getFightHit, getFightCrit, getFightCritMt,
     getCrestName, getCrestDesc, getWepTooltip, getEqpType,
-    getUnitEqpName, getAbilityArray, getAbilityDesc, getAbilityIcon, getCombatArtInd, getCombatArtMag
+    getUnitEqpName, getAbilityArray, getAbilityDesc, getAbilityIcon, getCombatArtInd, getCombatArtMag, getLvClass
 } from "../functions/Calculations.js";
 
 const AbilitiesData = require('../props/abilities.json');
@@ -170,14 +170,14 @@ function Settings() {
 function ResultDisplay() {
     const { unit1, unit2, combatArt } = useBetween(useShareableState);
 
-    let unit1Tip = "<b>" + unit1 + "</b>" + "<br/>Lv 13 Thief",
-        unit2Tip = "<b>" + unit2 + "</b>" + "<br/>Lv 16 Pegasus Rider",
-        unit1WepName = getUnitWepName(unit1),
+    let unit1WepName = getUnitWepName(unit1),
         unit1WepType = getWepType(unit1WepName),
         unit2WepName = getUnitWepName(unit2),
         unit2WepType = getWepType(unit2WepName);
 
-    let unit1Crest = getCrestName(unit1),
+    let unit1LvClass = getLvClass(unit1),
+        unit2LvClass = getLvClass(unit2),
+        unit1Crest = getCrestName(unit1),
         unit2Crest = getCrestName(unit2),
         unit1CrestDesc = getCrestDesc(unit1),
         unit2CrestDesc = getCrestDesc(unit2),
@@ -197,6 +197,9 @@ function ResultDisplay() {
         unit2Crit = getFightCrit(unit2, unit1, "None"),
         unit1CritMt = getFightCritMt(unit1, unit2, combatArt),
         unit2CritMt = getFightCritMt(unit2, unit1, "None");
+
+    let unit1Tip = "<b>" + unit1 + "</b>" + "<br/>" + unit1LvClass,
+        unit2Tip = "<b>" + unit2 + "</b>" + "<br/>" + unit2LvClass;
 
     return (
         <div className="Results">

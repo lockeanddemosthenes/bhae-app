@@ -6,6 +6,7 @@
         "name": "Edelgard",
         "weapon": "Training Axe",
         "lv": 15,
+        "class": "Armored Knight",
         "crestName": "Seiros",
         "crestDesc": "<b>Minor Crest of Seiros / Major Crest of Flames</b><br /><i>4 on d10 / 2 on d10</i><br />Raises Mt by 5 when using combat arts. / Restores HP equal to 30% of damage dealt.",
         "eqp": "Steel Shield",
@@ -43,7 +44,8 @@
       {
         "name": "Hubert",
         "weapon": "Mire B",
-        "lv": 15,
+        "lv": 17,
+        "class": "Dark Mage",
         "crestName": "None",
         "crestDesc": "",
         "eqp": "None",
@@ -81,7 +83,8 @@
       {
         "name": "Linhardt",
         "weapon": "Nosferatu",
-        "lv": 15,
+        "lv": 14,
+        "class": "Priest",
         "crestName": "Cethleann",
         "crestDesc": "<b>Minor Crest of Cethleann</b><br /><i>3 on d10</i><br />Raises Mt by 5 when using recovery magic.",
         "eqp": "None",
@@ -124,7 +127,8 @@
       {
         "name": "Dimitri",
         "weapon": "Training Lance",
-        "lv": 15,
+        "lv": 16,
+        "class": "Cavalier",
         "crestName": "Blaiddyd",
         "crestDesc": "<b>Minor Crest of Blaiddyd</b><br /><i>1 on d10</i><br />Doubles Mt and uses consumed when using combat arts.\n",
         "eqp": "None",
@@ -162,7 +166,8 @@
       {
         "name": "Dedue",
         "weapon": "Training Axe",
-        "lv": 15,
+        "lv": 6,
+        "class": "Commoner",
         "crestName": "None",
         "crestDesc": "",
         "eqp": "None",

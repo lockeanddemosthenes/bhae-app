@@ -73,6 +73,14 @@ export function getEqpType(eqpName) {
     return eqp[0].type;
 }
 
+export function getLvClass(unit) {
+    let unitIndArr = getUnitInd(unit),
+        lv = UnitsData[unitIndArr[0]].options[unitIndArr[1]].lv,
+        uClass = UnitsData[unitIndArr[0]].options[unitIndArr[1]].class,
+        lvClass = "Lv " + lv + " " + uClass;
+    return lvClass;
+}
+
 /**
  * Get Stat Functions
  */
