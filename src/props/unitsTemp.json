@@ -47,7 +47,7 @@
         "lv": 17,
         "class": "Dark Mage",
         "crestName": "None",
-        "crestDesc": "",
+        "crestDesc": "<b>None</b>",
         "eqp": "None",
         "abilities": [
           "na",
@@ -169,7 +169,7 @@
         "lv": 6,
         "class": "Commoner",
         "crestName": "None",
-        "crestDesc": "",
+        "crestDesc": "<b>None</b>",
         "eqp": "None",
         "abilities": [
           "na",
