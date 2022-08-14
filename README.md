@@ -5,14 +5,14 @@ Hosted at [url here].
 
 Contact lockeanddemosthenes / Loki with bugs, questions, or other comments.
 
-##Disclaimer
+## Disclaimer
 BHaE is in no way affiliated with Nintendo or Intelligent Systems. All official aspects of the *Fire Emblem* franchise are copyright 1990-2022 by Nintendo and Intelligent Systems.
 
-##Privacy Policy
+## Privacy Policy
 
 The BHaE Calculator is free for all to use and browse, no signup required. If you would like to use or reference the code, please contact lockeanddemosthenes / Loki for permission.
 
-##Tools
+## Tools
 - [React](https://github.com/facebook/create-react-app)
 - [React-Select](https://github.com/jedwatson/react-select)
 - [React-Tooltip](https://github.com/wwayne/react-tooltip)
