@@ -1,8 +1,6 @@
 # BHaE Calculator 2.0
-Between Heaven and Earth, or BHaE, is a semi-private Discord server with its own unique style of tabletop-based roleplaying. Its battle system and plot draw inspiration from Intelligent Systems' *Fire Emblem: Three Houses*; however, it is distinctly separate.
-
-Hosted at [url here].
-
+Between Heaven and Earth, or BHaE, is a semi-private Discord server with its own unique style of tabletop-based roleplaying. Its battle system and plot draw inspiration from Intelligent Systems' *Fire Emblem: Three Houses*; however, it is distinctly separate.\
+Hosted at [https://lockeanddemosthenes.github.io/bhae-app](https://lockeanddemosthenes.github.io/bhae-app). \
 Contact lockeanddemosthenes / Loki with bugs, questions, or other comments.
 
 ## Disclaimer
@@ -13,6 +11,7 @@ BHaE is in no way affiliated with Nintendo or Intelligent Systems. All official 
 The BHaE Calculator is free for all to use and browse, no signup required. If you would like to use or reference the code, please contact lockeanddemosthenes / Loki for permission.
 
 ## Tools
+- [Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
 - [React](https://github.com/facebook/create-react-app)
 - [React-Select](https://github.com/jedwatson/react-select)
 - [React-Tooltip](https://github.com/wwayne/react-tooltip)
@@ -35,8 +34,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `npm run build`
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
