@@ -1,0 +1,504 @@
+[
+  {
+    "label": "Black Eagles",
+    "options": [
+      {
+        "name": "Edelgard",
+        "weapon": "Training Axe",
+        "lv": 15,
+        "class": "Armored Knight",
+        "crestName": "Seiros",
+        "crestDesc": "<b>Minor Crest of Seiros / Major Crest of Flames</b><br /><i>4 on d10 / 2 on d10</i><br />Raises Mt by 5 when using combat arts. / Restores HP equal to 30% of damage dealt.",
+        "eqp": "Steel Shield",
+        "abilities": [
+          "imperial_bloodline",
+          "armored_blow",
+          "weight_3",
+          "lancebreaker",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 20,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Hubert",
+        "weapon": "Mire B",
+        "lv": 17,
+        "class": "Dark Mage",
+        "crestName": "None",
+        "crestDesc": "<b>None</b>",
+        "eqp": "None",
+        "abilities": [
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Linhardt",
+        "weapon": "Nosferatu",
+        "lv": 14,
+        "class": "Priest",
+        "crestName": "Cethleann",
+        "crestDesc": "<b>Minor Crest of Cethleann</b><br /><i>3 on d10</i><br />Raises Mt by 5 when using recovery magic.",
+        "eqp": "None",
+        "abilities": [
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Layla",
+        "weapon": "Iron Sword",
+        "lv": 16,
+        "class": "Mage",
+        "crestName": "Gautier",
+        "crestDesc": "<b>Minor Crest of Gautier</b><br /><i>4 on d10</i><br />Raises Mt by 5 when using combat arts.",
+        "eqp": "Accuracy Ring",
+        "abilities": [
+          "cheerful_spirit",
+          "fiendish_blow",
+          "fire",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 25,
+            "str": 22,
+            "mag": 18,
+            "dex": 10,
+            "spd": 13,
+            "luk": 9,
+            "def": 13,
+            "res": 19,
+            "cha": 12,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Finley",
+        "weapon": "Killer Lance",
+        "lv": 16,
+        "class": "Pegasus Rider",
+        "crestName": "None",
+        "crestDesc": "<b>None</b>",
+        "eqp": "None",
+        "abilities": [
+          "disarm_with_charm",
+          "alert_stance",
+          "canto",
+          "swordbreaker",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 30,
+            "str": 12,
+            "mag": 8,
+            "dex": 19,
+            "spd": 19,
+            "luk": 15,
+            "def": 16,
+            "res": 14,
+            "cha": 10,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Arvyn",
+        "weapon": "Rapier",
+        "lv": 19,
+        "class": "Mercenary",
+        "crestName": "None",
+        "crestDesc": "<b>None</b>",
+        "eqp": "None",
+        "abilities": [
+          "dauntless",
+          "axebreaker",
+          "vantage",
+          "battalion_vantage",
+          "unarmed_combat",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 37,
+            "str": 29,
+            "mag": 7,
+            "dex": 13,
+            "spd": 16,
+            "luk": 14,
+            "def": 15,
+            "res": 10,
+            "cha": 11,
+            "wt": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Blue Lions",
+    "options": [
+      {
+        "name": "Dimitri",
+        "weapon": "Training Lance",
+        "lv": 16,
+        "class": "Cavalier",
+        "crestName": "Blaiddyd",
+        "crestDesc": "<b>Minor Crest of Blaiddyd</b><br /><i>1 on d10</i><br />Doubles Mt and uses consumed when using combat arts.",
+        "eqp": "None",
+        "abilities": [
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Dedue",
+        "weapon": "Training Axe",
+        "lv": 6,
+        "class": "Commoner",
+        "crestName": "None",
+        "crestDesc": "<b>None</b>",
+        "eqp": "None",
+        "abilities": [
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 0,
+            "str": 0,
+            "mag": 0,
+            "dex": 0,
+            "spd": 0,
+            "luk": 0,
+            "def": 3,
+            "res": 0,
+            "cha": 0,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Thyra",
+        "weapon": "Iron Lance",
+        "lv": 16,
+        "class": "Mage",
+        "crestName": "Aulis",
+        "crestDesc": "<b>Minor Crest of Aulis</b><br /><i>2 on d10</i><br />Raises Mt by 5 when using weapons.",
+        "eqp": "None",
+        "abilities": [
+          "martyr",
+          "swordbreaker",
+          "battalion_vantage",
+          "dexterity_4",
+          "fire",
+          "fiendish_blow",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 36,
+            "str": 19,
+            "mag": 14,
+            "dex": 20,
+            "spd": 18,
+            "luk": 11,
+            "def": 14,
+            "res": 13,
+            "cha": 13,
+            "wt": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Golden Deer",
+    "options": [
+      {
+        "name": "Claude",
+        "weapon": "Iron Bow",
+        "lv": 15,
+        "class": "Archer",
+        "crestName": "Riegan",
+        "crestDesc": "<b>Minor Crest of Riegan</b><br /><i>3 on d10</i><br />Restores HP equal to 30% of damage dealt when using combat arts.",
+        "eqp": "None",
+        "abilities": [
+          "leicester_lineage",
+          "close_counter",
+          "fistbreaker",
+          "alert_stance",
+          "battalion_vantage",
+          "bowrange_1",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 33,
+            "str": 24,
+            "mag": 8,
+            "dex": 18,
+            "spd": 21,
+            "luk": 15,
+            "def": 8,
+            "res": 6,
+            "cha": 16,
+            "wt": 0
+          }
+        ]
+      },
+      {
+        "name": "Lucy",
+        "weapon": "Iron Lance",
+        "lv": 19,
+        "class": "Cavalier",
+        "crestName": "Thiordon",
+        "crestDesc": "<b>Minor Crest of Thiordon</b><br /><i>1 on d10</i><br />When initiating combat, recover 40% of current lost HP.",
+        "eqp": "None",
+        "abilities": [
+          "threes_a_crowd",
+          "swordbreaker",
+          "canto",
+          "dexterity_4",
+          "close_counter",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 33,
+            "str": 24,
+            "mag": 8,
+            "dex": 18,
+            "spd": 21,
+            "luk": 15,
+            "def": 8,
+            "res": 6,
+            "cha": 16,
+            "wt": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Ashen Wolves",
+    "options": [
+      {
+      }
+    ]
+  },
+  {
+    "label": "Church of Seiros",
+    "options": [
+      {
+        "name": "Cyril",
+        "weapon": "Iron Bow",
+        "lv": 14,
+        "class": "Brigand",
+        "crestName": "None",
+        "crestDesc": "<b>None</b>",
+        "eqp": "Evasion Ring",
+        "abilities": [
+          "aptitude",
+          "lancebreaker",
+          "close_counter",
+          "fistbreaker",
+          "alert_stance",
+          "death_blow",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na",
+          "na"
+        ],
+        "stats": [
+          {
+            "hp": 33,
+            "str": 24,
+            "mag": 8,
+            "dex": 18,
+            "spd": 21,
+            "luk": 15,
+            "def": 8,
+            "res": 6,
+            "cha": 16,
+            "wt": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Enemy",
+    "options": [
+      {
+      }
+    ]
+  }
+]
