@@ -19,6 +19,23 @@
         "crit": 0,
         "wt": 2,
         "note": ""
+      },      {
+        "name": "Iron Sword",
+        "type": "swordd",
+        "magic": false,
+        "mt": 5,
+        "hit": 90,
+        "crit": 0,
+        "wt": 5
+      },{
+        "name": "Iron Sword+",
+        "type": "swordd",
+        "magic": false,
+        "mt": 5,
+        "hit": 100,
+        "crit": 0,
+        "wt": 5,
+        "note": ""
       },{
         "name": "Steel Sword",
         "type": "swordd",
@@ -54,6 +71,24 @@
         "hit": 80,
         "crit": 35,
         "wt": 12,
+        "note": ""
+      },{
+        "name": "Rapier",
+        "type": "swordd",
+        "magic": false,
+        "mt": 7,
+        "hit": 95,
+        "crit": 10,
+        "wt": 5,
+        "note": ""
+      },{
+        "name": "Rapier+",
+        "type": "swordd",
+        "magic": false,
+        "mt": 9,
+        "hit": 95,
+        "crit": 20,
+        "wt": 5,
         "note": ""
       },{
         "name": "Levin Sword",
