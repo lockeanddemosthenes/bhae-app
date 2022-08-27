@@ -1,7 +1,6 @@
 const express = require('express'),
     mongodb = require('mongodb'),
     dotenv = require('dotenv').config(),
-    bodyParser = require('body-parser'),
     app = express();
 
 
@@ -10,11 +9,11 @@ app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-const uri = 'mongodb+srv://'+process.env.USER+':'+process.env.PASS+'@'+process.env.HOSTER
-//const uri = 'mongodb+srv://tester:tester3@cluster0.4clr3.mongodb.net/'
-const client = new mongodb.MongoClient( uri, { useNewUrlParser: true, useUnifiedTopology:true, serverApi: ServerApiVersion.v1 })
-
-let unitsColl = null;
+// const uri = 'mongodb+srv://'+process.env.USER+':'+process.env.PASS+'@'+process.env.HOSTER
+// //const uri = 'mongodb+srv://tester:tester3@cluster0.4clr3.mongodb.net/'
+// const client = new mongodb.MongoClient( uri, { useNewUrlParser: true, useUnifiedTopology:true, serverApi: ServerApiVersion.v1 })
+//
+// let unitsColl = null;
 
 // client.connect()
 //     .then( () => {
