@@ -225,10 +225,10 @@ export function getFightMt(unit1, unit2, combatArt) {
 
     mt += getCombatArtMt(combatArt);
 
-    return mt;
+    return parseInt(mt);
 }
 
-export function getFightMtStr(unit1, unit2, combatArt) {
+export function getFightMtString(unit1, unit2, combatArt) {
     let unit1Stats = getUnitStats(unit1),
         unit2Stats = getUnitStats(unit2),
         wep1Name = getUnitWepName(unit1),
@@ -266,7 +266,7 @@ export function getFightHit(unit1, unit2, combatArt) {
 
     hit += getCombatArtHit(combatArt);
 
-    return hit - avo;
+    return parseInt(hit - avo);
 }
 
 export function getFightCrit(unit1, unit2, combatArt) {
@@ -279,7 +279,7 @@ export function getFightCrit(unit1, unit2, combatArt) {
 
     crit += getCombatArtCrit(combatArt);
 
-    return crit - critAvo;
+    return parseInt(crit - critAvo);
 }
 
 export function getFightCritMt(unit1, unit2, combatArt) {
