@@ -7,7 +7,7 @@ import {
     getWepType,
     getUnitStats,
     getFightMt,
-    getFightMtStr,
+    getFightMtString,
     getFightHit,
     getFightCrit,
     getFightCritMt,
@@ -225,8 +225,8 @@ function ResultDisplay() {
     let abilityArrayUnit1 = getAbilityArray(unit1),
         abilityArrayUnit2 = getAbilityArray(unit2);
 
-    let unit1Mt = getFightMtStr(unit1, unit2, combatArt),
-        unit2Mt = getFightMtStr(unit2, unit1, "None"),
+    let unit1Mt = getFightMtString(unit1, unit2, combatArt),
+        unit2Mt = getFightMtString(unit2, unit1, "None"),
         unit1Hit = getFightHit(unit1, unit2, combatArt),
         unit2Hit = getFightHit(unit2, unit1, "None"),
         unit1Crit = getFightCrit(unit1, unit2, combatArt),
