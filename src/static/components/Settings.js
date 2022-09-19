@@ -329,6 +329,7 @@ function ResultDisplay() {
 
             <div className="Calculations">
                 <p><b>{unit1}</b> attacks <b>{unit2}</b> with <b>{unit1WepName}</b>!</p>
+                <div id="CalcTableDiv">
                 <table id="CalcTable">
                     <tr>
                         <th></th>
@@ -354,12 +355,13 @@ function ResultDisplay() {
                         <td>{unit2Crit}</td>
                     </tr>
 
-                    <tr>
+                    <tr class="no-bottom-border">
                         <td><b>Crit Mt</b></td>
                         <td>{unit1CritMt}</td>
                         <td>{unit2CritMt}</td>
                     </tr>
                 </table>
+                </div>
             </div>
 
             <div className="Participant" id="participant2">

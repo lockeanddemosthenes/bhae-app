@@ -248,8 +248,18 @@ input[type="checkbox"]:focus {
     font-size: 12pt;
 }
 
+#CalcTableDiv {
+    margin: 15pt;
+    border-radius: 15px;
+    border: 3px #64c89a solid;
+}
+
 #CalcTable {
     font-size: 1.5em;
+}
+
+tr.no-bottom-border td {
+    border-bottom: none;
 }
 
 .unit-portrait {
@@ -290,11 +300,6 @@ input[type="checkbox"]:focus {
 .Participant-Selection-Holder {
     display: grid;
     grid-template-columns: 2fr 3fr;
-}
-
-.Participant {
-    border-radius: 15px;
-    border: solid #8FF2B6 1px;
 }
 
 .Results {
