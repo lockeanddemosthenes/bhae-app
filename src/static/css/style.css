@@ -7,7 +7,8 @@
 html {
     font-size: 62.5%;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    background-color: #36393e;
+    background-image: url(../../../public/img/gmm_green.png);
+    background-position: 4500px 0px;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
     margin: 25px auto;
     color: #ccc;
     padding: 30px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.5);
     border-radius: 20px;
     text-align: justify;
 }
