@@ -60,10 +60,10 @@ function Settings() {
 
     return (
         <div className="Settings">
-            <h3>Settings</h3>
             <form action="">
-                <label htmlFor='participant1'>Participant 1: </label>
-                <br />
+                <div className="Participant-Selection-Holder">
+                    <div id="p1-selection-holder">
+                <h2 htmlFor='participant1'>Participant 1: </h2>
                 <div style={{width: '242px', margin: '0 2.5rem 2rem 2.5rem'}}>
                     <Select //menuIsOpen = {true}
                         id='participant1'
@@ -98,10 +98,10 @@ function Settings() {
                             },
                         })}
                     />
-                </div>
+                </div></div>
 
-                <label htmlFor='participant2'>Participant 2: </label>
-                <br />
+                    <div id="p2-selection-holder">
+                <h2 htmlFor='participant2'>Participant 2: </h2>
                 <div style={{width: '242px', margin: '0 2.5rem 2rem 2.5rem'}}>
                     <Select //menuIsOpen = {true}
                         id='participant2'
@@ -135,10 +135,9 @@ function Settings() {
                                 primary75: 'black'
                             },
                         })}
-                    /></div>
+                    /></div></div></div>
 
-                <label htmlFor='combatArt'>Combat Art: </label>
-                <br />
+                <h2 htmlFor='combatArt'>Combat Art: </h2>
                 <div style={{width: '242px', margin: '0 2.5rem 2rem 2.5rem'}}>
                     <Select //menuIsOpen = {true}
                         options={CombatArtsData}
@@ -174,8 +173,6 @@ function Settings() {
                 /></div>
                 <br />
             </form>
-            <button id="changeWpnBtn">Change Weapon</button>
-            <br/>
             <br/>
             <ResultDisplay />
         </div>

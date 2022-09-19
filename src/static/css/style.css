@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.618;
     max-width: 45em;
     margin: 25px auto;
@@ -62,21 +62,22 @@ body {
 
 h1, h2, h3, h4, h5, h6, label {
     line-height: 1.1;
-    font-family: 'EB-Garamond';
+    font-family: 'Gabriola';
     font-weight: 700;
     overflow-wrap: break-word;
     word-wrap: break-word;
     -ms-word-break: break-all;
     word-break: break-word;
-    margin: 3rem 2.5rem 2rem 2.5rem;
+    margin: 1rem 2.5rem 1rem 2.5rem;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 h2 {
     font-size: 2.00em;
+    margin-bottom: 0;
 }
 
 h3 {
@@ -247,6 +248,10 @@ input[type="checkbox"]:focus {
     font-size: 12pt;
 }
 
+#CalcTable {
+    font-size: 1.5em;
+}
+
 .unit-portrait {
     height: 9.65em;
     object-fit: contain;
@@ -282,6 +287,16 @@ input[type="checkbox"]:focus {
     margin: 0;
 }
 
+.Participant-Selection-Holder {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.Participant {
+    border-radius: 15px;
+    border: solid #8FF2B6 1px;
+}
+
 .Results {
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
@@ -297,7 +312,7 @@ input[type="checkbox"]:focus {
 }
 
 .UnitStatContainer {
-    font-size: 0.75em;
+    font-size: 1em;
     padding-left: 1em;
     padding-right: 3em;
     margin-left: 2em;
@@ -398,14 +413,21 @@ input:checked + .slider:before {
     font-size: 1em;
 }
 
-.css-1v033wt-control, .css-1v033wt-control:hover,
-.css-1v033wt-control:focus, .css-1v033wt-control:disabled,
-.css-vc650-control, .css-vc650-control:hover,
-.css-vc650-control:focus, .css-vc650-control:disabled,
+.css-1v033wt-control,
+.css-vc650-control,
 .css-1xnrj08-singleValue {
     box-shadow: none !important;
     border-color: #64C89A !important;
     color: black !important;
+}
+
+.css-1v033wt-control:hover, .css-1v033wt-control:focus,
+.css-1v033wt-control:disabled, .css-vc650-control:hover,
+.css-vc650-control:focus, .css-vc650-control:disabled {
+    box-shadow: none !important;
+    border-color: #8FF2B6 !important;
+    color: black !important;
+    background-color: #8FF2B6 !important;
 }
 
 .css-17fhtwc-menu, .css-17fhtwc-menu:hover,
@@ -486,7 +508,7 @@ table {
 td, th {
     padding: 0.5em;
     border-bottom: 1px solid #f1f1f1;
-    font-family: 'EB-Garamond';
+    font-family: 'Gabriola';
 }
 
 .pre {
