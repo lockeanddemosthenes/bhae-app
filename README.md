@@ -21,6 +21,21 @@ Images for canon characters are drawn by the official artist, Chinatsu Kurahana.
 The background image is adapted from a piece of concept art from *Fire Emblem: Three Houses*. See the disclaimer for more information. \
 Images for canon crests, weapons, equipment, and abilities come from or are adapted from *Fire Emblem: Three Houses*. See the disclaimer for more information.
 
+## Features
+- Automatic hit %, crit %, and damage calculations for both attacker and defender
+- Searchable participant selection
+- Participant dropdown menus that sort by allegiance
+- Searchable combat art selection
+- Combat art dropdown menus that sort by weapon type
+- Hover over crest, weapon, equipment, and abilities for more info
+- View stats on the same page (toggle!)
+
+## Upcoming Features
+- Gambits
+- Weapon change
+- Stats on a menu to the side (?)
+- Improved mobile compatibility
+
 ## Available Scripts
 In the project directory, you can run:
 
