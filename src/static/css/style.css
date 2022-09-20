@@ -460,6 +460,10 @@ input:checked + .slider:before {
     color: #4B4D52 !important;
 }
 
+.css-110w8ba {
+    color: black !important;
+}
+
 .css-4kgcrw-option {
     font-size: 1em;
     color: black !important;
