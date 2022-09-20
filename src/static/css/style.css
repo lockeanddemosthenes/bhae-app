@@ -421,6 +421,10 @@ input:checked + .slider:before {
 *
 **/
 
+#react-select-3-listbox {
+    color: black !important;
+}
+
 .css-b62m3t-container {
     font-size: 1em;
 }
