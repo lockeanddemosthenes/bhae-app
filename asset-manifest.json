@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/bhae-app/static/css/main.e8528c93.css",
-    "main.js": "/bhae-app/static/js/main.106f1fb7.js",
+    "main.css": "/bhae-app/static/css/main.3078ebdb.css",
+    "main.js": "/bhae-app/static/js/main.befc8292.js",
+    "static/media/gmm_green.png": "/bhae-app/static/media/gmm_green.67fcb84ca6a9f92736e2.png",
     "index.html": "/bhae-app/index.html",
-    "main.e8528c93.css.map": "/bhae-app/static/css/main.e8528c93.css.map",
-    "main.106f1fb7.js.map": "/bhae-app/static/js/main.106f1fb7.js.map"
+    "main.3078ebdb.css.map": "/bhae-app/static/css/main.3078ebdb.css.map",
+    "main.befc8292.js.map": "/bhae-app/static/js/main.befc8292.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8528c93.css",
-    "static/js/main.106f1fb7.js"
+    "static/css/main.3078ebdb.css",
+    "static/js/main.befc8292.js"
   ]
 }
