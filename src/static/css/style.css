@@ -429,6 +429,10 @@ input:checked + .slider:before {
     font-size: 1em;
 }
 
+.css-17oiyd, .css-11unzgr {
+    color: black !important;
+}
+
 .css-1v033wt-control,
 .css-vc650-control,
 .css-1xnrj08-singleValue {
